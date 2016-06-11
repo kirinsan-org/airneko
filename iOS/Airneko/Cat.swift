@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 final class Cat {
 	enum State: String {
-		case Idle = "" // 初期状態
+		case Idle = "idle" // 初期状態
 		case Sleeping = "sleeping" // 寝ている
 		case Angry = "angry" // 怒っている
 		case Playful = "playful" // じゃれている
