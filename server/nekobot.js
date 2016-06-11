@@ -158,6 +158,7 @@ function loop() {
     if (place && members[place]) {
       bomb(place);
       neko.setUnko(0);
+      neko.setState('unko');
     }
   }
 
