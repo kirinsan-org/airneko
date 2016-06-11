@@ -96,6 +96,12 @@ function loop() {
     let nextMember = randomChoose(members);
     if (nextMember) {
       neko.setPlace(nextMember);
+
+      // ランダムに状態遷移する
+      let nextState = randomChoose(status);
+      if (nextState) {
+        neko.setState(nextState);
+      }
     }
   }
 
