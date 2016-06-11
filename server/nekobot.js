@@ -11,16 +11,9 @@ let nekoRef = familyRef.child('neko/sampleneko');
 // });
 
 /**
- * 状態の一覧
+ * 自動で遷移する状態の一覧
  */
-let statusRef = db.ref('status');
-let status = [];
-statusRef.on('value', snapshot => {
-  status = [];
-  snapshot.forEach(child => {
-    status.push(child.key);
-  });
-});
+let status = ['sleeping', 'angry', 'yawn', 'delightful'];
 
 /**
  * メンバーの一覧
@@ -84,9 +77,9 @@ function loop() {
 
     } else {
 
-      // いたずら以外の状態にランダムに変化する
+      // ランダムに状態遷移する
       let nextState = randomChoose(status);
-      if (nextState && nextState !== 'escapade') {
+      if (nextState) {
         neko.setState(nextState);
       }
 
