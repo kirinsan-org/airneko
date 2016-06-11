@@ -12,57 +12,39 @@ nekoRef.on('value', snapshot => {
   console.log('neko', snapshot.val());
 });
 
-angular.module('App', [])
-  .factory('nekoRef', _ => {
-    return db.ref('family/sample/neko/sampleneko');
-  })
-  .controller('Main', ($scope) => {
+angular.module('App', ['firebase'])
+  .controller('Main', ($scope, $firebaseObject) => {
 
-    memberRef.on('value', snapshot => {
-      $scope.members = snapshot.val();
-      $scope.$apply();
-    });
-
-    nekoRef.on('value', snapshot => {
-      $scope.neko = snapshot.val();
-      $scope.$apply();
-    });
-
-    statusRef.on('value', snapshot => {
-      $scope.status = snapshot.val();
-      $scope.$apply();
-    })
+    $scope.members = $firebaseObject(memberRef);
+    $firebaseObject(nekoRef).$bindTo($scope, 'neko');
+    $scope.status = $firebaseObject(statusRef);
 
     /**
      * 居場所を変える
      */
     $scope.setPlace = (place) => {
-      nekoRef.child('place').set(place);
+      $scope.neko.place = place;
     };
 
     /**
      * 状態を変える
      */
     $scope.setState = (state) => {
-      nekoRef.child('state').set(state);
+      $scope.neko.state = state;
     };
 
     /**
      * 空腹度を操作する
      */
     $scope.addHungry = (value) => {
-      nekoRef.child('hungry').transaction(currentVal => {
-        return currentVal + value;
-      });
+      $scope.neko.hungry += value;
     };
 
     /**
      * うんこ度を操作する
      */
     $scope.addUnko = (value) => {
-      nekoRef.child('unko').transaction(currentVal => {
-        return currentVal + value;
-      });
+      $scope.neko.unko += value;
     };
 
   });
