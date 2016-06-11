@@ -57,6 +57,19 @@ function bomb(memberId) {
   });
 }
 
+/**
+ * ねこじゃらしを表示しているメンバーを取得する。いなければnull。
+ */
+function getSateriaMemberId() {
+  for (let memberId in members) {
+    let member = members[memberId];
+    if (member.setaria) {
+      return memberId;
+    }
+  }
+  return null;
+}
+
 let neko = new Neko(nekoRef);
 
 /**
@@ -91,16 +104,24 @@ function loop() {
     }
   }
 
-  // 場所が変わる
-  if (rnd(0.1)) {
-    let nextMember = randomChoose(members);
-    if (nextMember) {
-      neko.setPlace(nextMember);
+  // ねこじゃらしをしている人がいたらその人の場所へ移動し、じゃれている状態にする
+  let sateriaMemberId = getSateriaMemberId();
+  if (sateriaMemberId) {
+    neko.setPlace(sateriaMemberId);
+    neko.setState('playful');
+  } else {
 
-      // ランダムに状態遷移する
-      let nextState = randomChoose(status);
-      if (nextState) {
-        neko.setState(nextState);
+    // 誰もじゃらしていないときは、ランダムで場所が変わる
+    if (rnd(0.1)) {
+      let nextMember = randomChoose(members);
+      if (nextMember) {
+        neko.setPlace(nextMember);
+
+        // ランダムに状態遷移する
+        let nextState = randomChoose(status);
+        if (nextState) {
+          neko.setState(nextState);
+        }
       }
     }
   }
@@ -120,8 +141,6 @@ function loop() {
       neko.setUnko(0);
     }
   }
-
-  // TODO 空腹度をチェックして、ランダム確率でいたずらをする。
 
   setTimeout(loop, stateUpdateInterval);
 }
