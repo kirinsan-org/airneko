@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		798B3B1B1D0C3F91008AAF9D /* CatViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B1A1D0C3F91008AAF9D /* CatViewAnimation.swift */; };
 		BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155AA1D0C0A68000F307C /* CatViewController.swift */; };
 		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		65906EB1010B091807BA1707 /* Pods_Airneko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airneko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		798B3B1A1D0C3F91008AAF9D /* CatViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewAnimation.swift; sourceTree = "<group>"; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
 		BF6155AA1D0C0A68000F307C /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */,
 				BFDBF7031D0BED13003AC38B /* Cat.swift */,
 				BFDBF7071D0BFEBC003AC38B /* CatView.swift */,
+				798B3B1A1D0C3F91008AAF9D /* CatViewAnimation.swift */,
 				BF6155AA1D0C0A68000F307C /* CatViewController.swift */,
 				BFDBF6FA1D0BEB3E003AC38B /* Resources */,
 			);
@@ -232,6 +235,7 @@
 				BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */,
 				BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */,
 				BFDBF7081D0BFEBC003AC38B /* CatView.swift in Sources */,
+				798B3B1B1D0C3F91008AAF9D /* CatViewAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
