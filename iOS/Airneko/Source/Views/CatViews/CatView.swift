@@ -83,6 +83,16 @@ private extension Cat.State {
 		return 4
 	}
 	var animationImageNamePrefix: String {
+		
+		let samplePrefix: String
+		switch self {
+		case .Delightful, .Sleeping:
+			samplePrefix = ""
+			
+		default:
+			samplePrefix = "_sample_"
+		}
+		
 		let prefix: String
 		switch self {
 		case .Sleeping:
@@ -90,7 +100,9 @@ private extension Cat.State {
 		default:
 			prefix = rawValue
 		}
-		return "_sample_\(prefix)"
+		
+		return "\(samplePrefix)\(prefix)"
+		
 	}
 	var animationImageNames: [String] {
 		return Array(0..<numberOfAnimationImages).map { index in
