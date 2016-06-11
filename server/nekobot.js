@@ -134,7 +134,7 @@ function loop() {
   // うんこ度をチェックして、うんこ度が1を超えていたらうんこする。うんこ度は0になる。
   if (neko.getUnko() >= 1) {
     let place = neko.getPlace();
-    if (place && members[place]) {
+    if (place && members.indexOf(place) > 0) {
       bomb(place);
       neko.setUnko(0);
     }
