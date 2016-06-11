@@ -7,23 +7,12 @@
 //
 
 import UIKit
-import ReactiveCocoa
 
 final class CatView: UIView {
 	
 	let imageView = UIImageView()
 	
 	var isInAnimation = false
-
-	var modelDisposable: Disposable?
-	var model: Cat? {
-		willSet {
-			stopObservingModel()
-		}
-		didSet {
-			startObservingModel()
-		}
-	}
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -35,10 +24,6 @@ final class CatView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	deinit {
-		stopObservingModel()
-	}
-	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
@@ -47,35 +32,21 @@ final class CatView: UIView {
 		
 	}
 
-	func startObservingModel() {
-		guard let model = model else {
-			return
+}
+
+extension CatView {
+	
+	func catStatusIsChanged(to state: Cat.State) {
+		
+		imageView.animationDuration = state.animationInterval
+		imageView.animationImages = state.animationImageNames.flatMap { name in
+			print(name)
+			return UIImage(named: name)
 		}
-
-		let disposable = CompositeDisposable()
-
-		disposable += model.state.producer
-			.skipRepeats()
-			.observeOn(UIScheduler())
-			.startWithNext() { [weak self] state in
-				guard let imageView = self?.imageView else {
-					return
-				}
-				imageView.animationDuration = state.animationInterval
-				imageView.animationImages = state.animationImageNames.flatMap { name in
-					print(name)
-					return UIImage(named: name)
-				}
-				imageView.startAnimating()
-			}
-
-		modelDisposable = disposable
+		imageView.startAnimating()
+		
 	}
-
-	func stopObservingModel() {
-		modelDisposable?.dispose()
-		modelDisposable = nil
-	}
+	
 }
 
 private extension Cat.State {

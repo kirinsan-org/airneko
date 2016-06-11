@@ -11,6 +11,7 @@ import FirebaseDatabase
 import ReactiveCocoa
 
 final class Cat {
+	
 	enum State: String {
 		case Idle = "idle" // 初期状態
 		case Sleeping = "sleeping" // 寝ている
