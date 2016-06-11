@@ -8,11 +8,29 @@
 
 import UIKit
 
+protocol CatViewDelegate: class {
+	func getCatState() -> Cat.State
+}
+
 final class CatView: UIView {
+	
+	weak var delegate: CatViewDelegate?
 	
 	let imageView = UIImageView()
 	
 	var isInAnimation = false
+	
+	private lazy var animationImages: [String: [UIImage]] = {
+		let images = Cat.State.allStates.reduce([:]) { (images, nextState) -> [String: [UIImage]] in
+			var images = images
+			let nextStateImages = nextState.animationImageNames.map({ (name) -> UIImage in
+				return UIImage(named: name) ?? UIImage()
+			})
+			images[nextState.rawValue] = nextStateImages
+			return images
+		}
+		return images
+	}()
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -36,14 +54,40 @@ final class CatView: UIView {
 
 extension CatView {
 	
-	func catStatusIsChanged(to state: Cat.State) {
+	func startObservingCatStatus() {
 		
-		imageView.animationDuration = state.animationInterval
-		imageView.animationImages = state.animationImageNames.flatMap { name in
-			print(name)
-			return UIImage(named: name)
+		GCD.runAsynchronizedQueue(at: .Global(priority: .Default)) {
+			self.animateCat(nil, lastFrame: nil)
 		}
-		imageView.startAnimating()
+		
+	}
+	
+	func animateCat(lastState: Cat.State?, lastFrame: Int?) {
+		
+		let currentTime = NSDate()
+		
+		guard let state = delegate?.getCatState(), images = animationImages[state.rawValue] else {
+			return
+		}
+		
+		let frame: Int
+		if let lastState = lastState where state == lastState {
+			if let lastFrame = lastFrame where lastFrame + 1 < images.count {
+				frame = lastFrame + 1
+			} else {
+				frame = 0
+			}
+		} else {
+			frame = 0
+		}
+		
+		GCD.runAsynchronizedQueue(at: .Main) {
+			self.imageView.image = images[frame]
+		}
+		
+		GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) {
+			self.animateCat(state, lastFrame: frame)
+		}
 		
 	}
 	

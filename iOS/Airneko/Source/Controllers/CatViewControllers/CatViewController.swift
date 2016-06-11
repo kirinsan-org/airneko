@@ -13,20 +13,20 @@ final class CatViewController: UIViewController {
 	
 	private let catModel: Cat
 	private let catView: CatView
-	var modelDisposable: Disposable?
+	
+	var catState: Cat.State {
+		return catModel.state.value
+	}
 	
 	init(cat: Cat? = nil, catView: CatView? = nil, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: NSBundle? = nil) {
 		self.catModel = cat ?? Cat()
 		self.catView = catView ?? CatView()
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+		self.catView.delegate = self
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
-	}
-	
-	deinit {
-		stopObservingModel()
 	}
 	
 	override func loadView() {
@@ -36,34 +36,19 @@ final class CatViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		startObservingModel()
+		catView.startObservingCatStatus()
 	}
 
-	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-		catView.doAnimation()
-	}
+//	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//		catView.doAnimation()
+//	}
 	
 }
 
-extension CatViewController {
+extension CatViewController: CatViewDelegate {
 	
-	func startObservingModel() {
-		
-		let disposable = CompositeDisposable()
-		
-		disposable += catModel.state.producer
-			.skipRepeats()
-			.observeOn(UIScheduler())
-			.startWithNext() { [weak self] state in
-				self?.catView.catStatusIsChanged(to: state)
-		}
-		
-		modelDisposable = disposable
-	}
-	
-	func stopObservingModel() {
-		modelDisposable?.dispose()
-		modelDisposable = nil
+	func getCatState() -> Cat.State {
+		return catState
 	}
 	
 }
