@@ -121,6 +121,11 @@ function loop() {
           neko.setPlace(memberId);
           neko.setState('eating');
           memberRef.child(memberId).child('item').set('none');
+
+          // なつき度が上がるかも
+          if (rnd(0.5)) {
+            neko.addNatsuki(memberId, 10);
+          }
           moved = true;
         }
       }
