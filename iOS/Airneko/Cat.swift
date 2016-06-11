@@ -24,7 +24,7 @@ final class Cat {
 	}
 
 	enum Place: Equatable {
-		case User(String) // 誰かのところ
+		case Member(String) // 誰かのところ
 		case Some // 誰かのところではないどこか
 	}
 
@@ -54,7 +54,7 @@ final class Cat {
 				self?.name.value = value
 			}
 			if let value = dictionary["place"] as? String {
-				self?.place.value = .User(value)
+				self?.place.value = .Member(value)
 			} else {
 				self?.place.value = .Some
 			}
@@ -70,7 +70,7 @@ final class Cat {
 
 func ==(lhs: Cat.Place, rhs: Cat.Place) -> Bool {
 	switch (lhs, rhs) {
-	case (.User(let user1), .User(let user2)):
+	case (.Member(let user1), .Member(let user2)):
 		return user1 == user2
 	case (.Some, .Some):
 		return true
