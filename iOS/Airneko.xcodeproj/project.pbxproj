@@ -13,6 +13,7 @@
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
 		BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6FF1D0BEC0F003AC38B /* .gitignore */; };
+		BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */; };
 		FCC33676D521583688564016 /* Pods_Airneko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65906EB1010B091807BA1707 /* Pods_Airneko.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		BFDBF6F21D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDBF6F41D0BEB09003AC38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDBF6FF1D0BEC0F003AC38B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 		BFDBF6FA1D0BEB3E003AC38B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */,
 				BFDBF6EC1D0BEB09003AC38B /* Main.storyboard */,
 				BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */,
 				BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 			files = (
 				BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */,
 				BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */,
+				BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */,
 				BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */,
 				BFDBF6EE1D0BEB09003AC38B /* Main.storyboard in Resources */,
 			);
