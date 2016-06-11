@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155AA1D0C0A68000F307C /* CatViewController.swift */; };
 		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
-		BFDBF6EB1D0BEB09003AC38B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */; };
 		BFDBF6EE1D0BEB09003AC38B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EC1D0BEB09003AC38B /* Main.storyboard */; };
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
@@ -22,9 +22,9 @@
 /* Begin PBXFileReference section */
 		65906EB1010B091807BA1707 /* Pods_Airneko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airneko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6155AA1D0C0A68000F307C /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFDBF6ED1D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDBF6F21D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */,
-				BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */,
 				BFDBF7031D0BED13003AC38B /* Cat.swift */,
 				BFDBF7071D0BFEBC003AC38B /* CatView.swift */,
+				BF6155AA1D0C0A68000F307C /* CatViewController.swift */,
 				BFDBF6FA1D0BEB3E003AC38B /* Resources */,
 			);
 			path = Airneko;
@@ -232,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFDBF6EB1D0BEB09003AC38B /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
 				BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */,
+				BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */,
 				BFDBF7081D0BFEBC003AC38B /* CatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
