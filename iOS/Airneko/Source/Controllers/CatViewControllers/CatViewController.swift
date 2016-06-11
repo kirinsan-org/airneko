@@ -12,7 +12,7 @@ final class CatViewController: UIViewController {
 	
 	private let catView: CatView
 	
-	init(catView: CatView? = nil, nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+	init(catView: CatView? = nil, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: NSBundle? = nil) {
 		self.catView = catView ?? CatView()
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
@@ -30,4 +30,9 @@ final class CatViewController: UIViewController {
 		super.viewDidLoad()
 		catView.model = Cat()
 	}
+	
+	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+		catView.doAnimation()
+	}
+	
 }

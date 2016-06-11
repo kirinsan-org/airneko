@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		FIRApp.configure()
 
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		window?.rootViewController = CatViewController(nibName: nil, bundle: nil)
+		window?.rootViewController = ViewController(nibName: nil, bundle: nil)
 		window?.makeKeyAndVisible()
 
 		return true
