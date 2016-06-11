@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="stylesheets/screen.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header id="logo">
+</header>
+<div class="splash-images">
+  <div class="cloud"></div>
+  <div class="roof">
+  </div>
+</div>
+
+
+<section id="intro">
+  <ul class="rooms">
+    <li><img src="images/btn_create_family.png"></li>
+    <li><img src="images/btn_exist_family.png"></li>
+  </ul>
+</section>
+
+
+<script>
+  setTimeout(function(){
+    $("body").addClass("launched");
+  },2000)
+
+  $(".rooms li").on({
+    "click":function(){
+      $("body").addClass("catwindow");
+    }
+  })
+  
+</script>
+</body>
+</html>
