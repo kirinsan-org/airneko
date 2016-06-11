@@ -89,8 +89,11 @@ function loop() {
     }
   }
 
-  // 食事中以外の場合は移動するかも
-  if (members && neko.getState() !== 'eating') {
+  // 食事中、じゃれ中、寝ている以外の場合は移動するかも
+  if (members
+    && neko.getState() !== 'eating'
+    && neko.getState() !== 'playful'
+    && neko.getState() !== 'sleeping') {
 
     // 1. ねこじゃらしをしている人がいたら一定の確率でその人の場所へ移動し、じゃれている状態にする。
     //    移動が起きた場合はねこじゃらしが画面から消える
