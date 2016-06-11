@@ -64,6 +64,11 @@ let neko = new Neko(nekoRef);
  */
 function loop() {
 
+  // 食事中だったらうんこ度が増える
+  if (neko.getState() === 'eating') {
+    neko.addUnko(0.1);
+  }
+
   // 状態が変わる
   if (rnd(0.1)) {
 
