@@ -65,7 +65,7 @@ module.exports = class Neko {
   addHungry(value) {
     console.log('addHungry', value);
     return this.ref.child('hungry').transaction(currentVal => {
-      return currentVal + value;
+      return Math.min(1, Math.max(0, currentVal + value));
     });
   }
 
@@ -75,7 +75,7 @@ module.exports = class Neko {
   addUnko(value) {
     console.log('addUnko', value);
     return this.ref.child('unko').transaction(currentVal => {
-      return currentVal + value;
+      return Math.min(1, Math.max(0, currentVal + value));
     });
   }
 
