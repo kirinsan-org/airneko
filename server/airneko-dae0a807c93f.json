@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "project-8755291933643910997",
+  "private_key_id": "dae0a807c93fdc62bc5ae2370f1f58b88003f6a2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2TCbvZLghxp2m\n+O4XRoZHVvomAfU8bUMdovQQYpO4tvJ4pMDLr7xeRTGI7/U9hTOa7rS1QZFUOJcp\nAiVQzAN87DbstS/PQ8Qh9yVhr+1S2+34Q1vTuNmGNFdG+vUTbKchDiQUYcEqIqBD\ngY+59QOnokSXoVyTYNzYkK1CCm6QXW9hYF+x1l19UxJjFBzh6pgcYo9AGxrS4qgb\naNi79h1pGQif9WV6GA6BfR+hGTaX/vtX2Hzg6DlPceSpIzUsgBSYhiyApyrWez9L\n34o65ouLxAnakE3jSTkNYLwCwSEX9wM0P/ChC+Ka7qCRE82EaoCHtmBpSyrOyN/7\np3HO6IBHAgMBAAECggEAAgT58XD2MTmYCX98c7mOR0AJaV5gLxkuwydI+N1+sW8l\nZHy+vgLmXUz67X9rAhF1ruOyEMf3Ki2uTv/9FdYMu9eKDDk9nFgt1gp82YYvZNmW\n20czvzavAjOWO+0PxfVQLKeRcsBaeXMEv3qx8udp8PN1OxDIi8Fo8OU5Zh/jdanu\ngYwA8vL2GgRg6z3CXXSodR5OTWIrH1Ih+zQ0x0iKeXx8Uvmc1P711YK/bxCPeoiu\nacX7NAyMOEoUT4qjg3CBmS2ZJAxfNr8MNHa9fwEnJhdCCNqre1qZC9mwJiEtApKz\newjYid6VieX5Wnvv4XjQZk+38JKCS0E0Z7r3pJg/wQKBgQDsqv/qs5vg6jlLu9/V\nbjBYoGlFDvo3G+ySfU6H7t3tIVRoidStMe0PQCodLDnDrmg2oKXR68w9DVOKErZv\nMS2M57B3puXQf3B8I4/nLNlqWfFS4v2ZA9/rn79fqyfvNDBKcWrGhabjQPZYnAV+\ne4IwTxBATwtZ5Td6Eq7GVZK4NwKBgQDFMDPaNfk8DaRghzrD2aAvV7zYDbNmXPQ2\n/1vom0NLEdTpnvct12daxP91ec+9/JLohbFD+4tRS+LnEBh6fn0u8UteOz/Zl9TU\nQV3BeFASpr+hELaOE5IQnrzddt3n7cBbDuICXJXeCQos/y3qZQxTWcDV802dg3xc\naYuUWwxQcQKBgQDokbnfWBTsVv9q7vqs8BVOYoRQOsGj+irmYYEUj6VCa6hY+mkm\nsZM1k2ZPOLCjHPaICCIrQb54mGnpmy3v4rHSb7O4QShBVZqiQwgcsrQMkMpXG3z+\nKxKWp2sWhkk+BVkXLpEw+RHg7Guo89lqS9DJzEg6CfMrqdZ0fXuGp30AzQKBgHg5\n2YOUIO/iiXRpPwUmbSowXm2EfPtOdYAK1ejOsYrVxnDigWarzNJlBjSEHouBsbif\nuuLuPZVFpYSoJaSZ9o1mhUNg8J8kmZkIebd6OagFjxUO8Z9Sg14qypBk5wt/xCZA\nvsAd3ypPbKreswoUrh0rvg00mQAOqQZXO8kqcimhAoGAA/SstLrHhPH6LP6lNy1M\np9/ZrGwhe895WwmxiYoGxV3RkigLMKl3kKrxQi8TM7/GempQPmEpS4ZzLcoK6dp0\nXJngAAWQ3SGmt5Wc/1tipx9VAqfhMAFHvlKkSJfwUVQa+jiO58gLEiR0zMDY3T1c\nUoAew3AgrwseljAR2JkbfOo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "airneko-server@project-8755291933643910997.iam.gserviceaccount.com",
+  "client_id": "103833647282614263314",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/airneko-server%40project-8755291933643910997.iam.gserviceaccount.com"
+}
