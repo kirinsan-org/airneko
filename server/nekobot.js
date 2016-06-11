@@ -103,20 +103,20 @@ function loop() {
       let member = members[memberId];
 
       // ねこじゃらしを表示しているかどうか
-      if (member.setaria) {
+      if (member.item === 'setaria') {
         if (rnd(0.5)) {
           neko.setPlace(memberId);
           neko.setState('playful');
-          memberRef.child(memberId).child('setaria').set(false);
+          memberRef.child(memberId).child('item').set('none');
           moved = true;
         }
       }
       // えさを表示しているかどうか
-      else if (member.feed) {
+      else if (member.item === 'feed') {
         if (rnd(0.5)) {
           neko.setPlace(memberId);
           neko.setState('eating');
-          memberRef.child(memberId).child('feed').set(false);
+          memberRef.child(memberId).child('item').set('none');
           moved = true;
         }
       }
