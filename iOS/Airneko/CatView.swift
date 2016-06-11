@@ -10,6 +10,7 @@ import UIKit
 import ReactiveCocoa
 
 final class CatView: UIView {
+	
 	let imageView = UIImageView()
 
 	var modelDisposable: Disposable?
@@ -24,9 +25,7 @@ final class CatView: UIView {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-
-		imageView.frame = bounds
-		imageView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		backgroundColor = .whiteColor()
 		addSubview(imageView)
 	}
 	
@@ -36,6 +35,14 @@ final class CatView: UIView {
 
 	deinit {
 		stopObservingModel()
+	}
+	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		
+		imageView.frame.size = CGSize(width: 256, height: 256)
+		imageView.center = self.center
+		
 	}
 
 	func startObservingModel() {
