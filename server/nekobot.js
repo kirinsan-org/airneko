@@ -30,7 +30,7 @@ memberRef.on('value', snapshot => {
 /**
  * 状態変更ループの間隔
  */
-let stateUpdateInterval = 10000;
+let stateUpdateInterval = 3000;
 
 /**
  * @param probability 0-1でtrueになる確立を与える
@@ -65,7 +65,7 @@ let neko = new Neko(nekoRef);
 function loop() {
 
   // 状態が変わる
-  if (rnd(0.3)) {
+  if (rnd(0.1)) {
 
     // いたずらかどうかをまず判定する
     let isEscapade = rnd(1 - neko.getHungry()); // 空腹度が低いほどいたずらになりやすい
@@ -87,7 +87,7 @@ function loop() {
   }
 
   // 場所が変わる
-  if (rnd(0.3)) {
+  if (rnd(0.1)) {
     let nextMember = randomChoose(members);
     if (nextMember) {
       neko.setPlace(nextMember);
@@ -95,7 +95,7 @@ function loop() {
   }
 
   // 空腹度が減る
-  if (rnd(0.3)) {
+  if (rnd(0.1)) {
     if (neko.getHungry() > 0) {
       neko.addHungry(-0.05);
     }
