@@ -10,7 +10,7 @@ import UIKit
 import ReactiveCocoa
 
 final class CatView: UIView {
-	@IBOutlet weak var imageView: UIImageView!
+	let imageView = UIImageView()
 
 	var modelDisposable: Disposable?
 	var model: Cat? {
@@ -20,6 +20,18 @@ final class CatView: UIView {
 		didSet {
 			startObservingModel()
 		}
+	}
+
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+
+		imageView.frame = bounds
+		imageView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		addSubview(imageView)
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 
 	deinit {

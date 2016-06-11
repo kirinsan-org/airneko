@@ -9,10 +9,18 @@
 import UIKit
 
 final class CatViewController: UIViewController {
-	@IBOutlet weak var catView: CatView!
+	var catView: CatView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		view.backgroundColor = UIColor.whiteColor()
+
+		catView = CatView()
+		catView.bounds = CGRect(x: 0, y: 0, width: 256, height: 256)
+		catView.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
 		catView.model = Cat()
+
+		view.addSubview(catView)
 	}
 }
