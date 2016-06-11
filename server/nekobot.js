@@ -141,9 +141,7 @@ function loop() {
   }
 
   // 空腹度が増える
-  if (neko.getHungry()) {
-    neko.addHungry(0.001);
-  }
+  neko.addHungry(0.001);
 
   // うんこ度をチェックして、うんこ度が1を超えていたらうんこする。うんこ度は0になる。
   if (neko.getUnko() >= 1) {
