@@ -1,5 +1,6 @@
 const db = require('../lib/db.js');
 
+let statusRef = db.ref('status');
 let familyRef = db.ref('family/sample');
 let memberRef = familyRef.child('member');
 memberRef.on('value', snapshot => {
@@ -26,6 +27,11 @@ angular.module('App', [])
       $scope.neko = snapshot.val();
       $scope.$apply();
     });
+
+    statusRef.on('value', snapshot => {
+      $scope.status = snapshot.val();
+      $scope.$apply();
+    })
 
     /**
      * 居場所を変える
