@@ -13,6 +13,7 @@
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
 		BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6FF1D0BEC0F003AC38B /* .gitignore */; };
+		BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF7031D0BED13003AC38B /* Cat.swift */; };
 		BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */; };
 		FCC33676D521583688564016 /* Pods_Airneko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65906EB1010B091807BA1707 /* Pods_Airneko.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		BFDBF6F21D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDBF6F41D0BEB09003AC38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDBF6FF1D0BEC0F003AC38B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		BFDBF7031D0BED13003AC38B /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 			children = (
 				BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */,
 				BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */,
+				BFDBF7031D0BED13003AC38B /* Cat.swift */,
 				BFDBF6FA1D0BEB3E003AC38B /* Resources */,
 			);
 			path = Airneko;
@@ -228,6 +231,7 @@
 			files = (
 				BFDBF6EB1D0BEB09003AC38B /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
+				BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
