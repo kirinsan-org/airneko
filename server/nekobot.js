@@ -176,9 +176,22 @@ function loop() {
 
   // 状態が変わる
   if (rnd(0.3)) {
-    let nextState = randomChoose(status);
-    if (nextState) {
-      neko.setState(nextState);
+
+    // いたずらかどうかをまず判定する
+    let isEscapade = rnd(1 - neko.getHungry()); // 空腹度が低いほどいたずらになりやすい
+    if (isEscapade) {
+
+      // TODO いたずらを実行する。
+      neko.setPlace('other'); // いたずらを実行する時は誰の場所にも現れない。
+
+    } else {
+
+      // いたずら以外の状態にランダムに変化する
+      let nextState = randomChoose(status);
+      if (nextState && nextState !== 'escapade') {
+        neko.setState(nextState);
+      }
+
     }
   }
 
@@ -200,7 +213,7 @@ function loop() {
   // うんこ度をチェックして、うんこ度が1を超えていたらうんこする。うんこ度は0になる。
   if (neko.getUnko() >= 1) {
     let place = neko.getPlace();
-    if (place) {
+    if (place && members[place]) {
       bomb(place);
       neko.setUnko(0);
     }
