@@ -116,7 +116,8 @@ function loop() {
       }
       // えさを表示しているかどうか
       else if (member.item === 'feed') {
-        if (rnd(0.5)) {
+        // 移動確率は空腹度が高い程高い
+        if (rnd(neko.getHungry())) {
           neko.setPlace(memberId);
           neko.setState('eating');
           memberRef.child(memberId).child('item').set('none');
