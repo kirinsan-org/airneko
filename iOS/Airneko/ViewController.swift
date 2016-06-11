@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		let controller = CatViewController()
+		let controller = EntranceController()
 		self.presentViewController(controller, animated: false, completion: nil)
 	}
 	
