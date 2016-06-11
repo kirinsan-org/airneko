@@ -19,12 +19,9 @@ let status = ['sleeping', 'angry', 'yawn', 'delightful'];
  * メンバーの一覧
  */
 let memberRef = familyRef.child('member');
-let members = [];
+let members;
 memberRef.on('value', snapshot => {
-  members = [];
-  snapshot.forEach(child => {
-    members.push(child.key);
-  });
+  members = snapshot.val();
 });
 
 /**
@@ -57,19 +54,6 @@ function bomb(memberId) {
   });
 }
 
-/**
- * ねこじゃらしを表示しているメンバーを取得する。いなければnull。
- */
-function getSateriaMemberId() {
-  for (let memberId in members) {
-    let member = members[memberId];
-    if (member.setaria) {
-      return memberId;
-    }
-  }
-  return null;
-}
-
 let neko = new Neko(nekoRef);
 
 /**
@@ -77,16 +61,17 @@ let neko = new Neko(nekoRef);
  */
 function loop() {
 
-  // 食事中だったらうんこ度が増える
+  // 食事中だったらうんこ度が増える。空腹度は下がる。
   if (neko.getState() === 'eating') {
     neko.addUnko(0.1);
+    neko.addHungry(-0.1);
   }
 
   // 状態が変わる
   if (rnd(0.1)) {
 
     // いたずらかどうかをまず判定する
-    let isEscapade = rnd(1 - neko.getHungry()); // 空腹度が低いほどいたずらになりやすい
+    let isEscapade = rnd(neko.getHungry()); // 空腹度が高いほどいたずらになりやすい
     if (isEscapade) {
 
       // TODO いたずらを実行する。
@@ -104,37 +89,66 @@ function loop() {
     }
   }
 
-  // ねこじゃらしをしている人がいたらその人の場所へ移動し、じゃれている状態にする
-  let sateriaMemberId = getSateriaMemberId();
-  if (sateriaMemberId) {
-    neko.setPlace(sateriaMemberId);
-    neko.setState('playful');
-  } else {
+  // 食事中以外の場合は移動するかも
+  if (members && neko.getState() !== 'eating') {
 
-    // 誰もじゃらしていないときは、ランダムで場所が変わる
-    if (rnd(0.1)) {
-      let nextMember = randomChoose(members);
-      if (nextMember) {
-        neko.setPlace(nextMember);
+    // 1. ねこじゃらしをしている人がいたら一定の確率でその人の場所へ移動し、じゃれている状態にする。
+    //    移動が起きた場合はねこじゃらしが画面から消える
+    // 2. えさを置いている人がいたら一定の確率でその人の場所へ移動し、食事状態にする。
+    //    移動が起きた場合はえさが画面から消える
 
-        // ランダムに状態遷移する
-        let nextState = randomChoose(status);
-        if (nextState) {
-          neko.setState(nextState);
+    let moved = false; // 移動が発生した場合はtrueになる
+
+    for (let memberId in members) {
+      let member = members[memberId];
+
+      // ねこじゃらしを表示しているかどうか
+      if (member.setaria) {
+        if (rnd(0.5)) {
+          neko.setPlace(memberId);
+          neko.setState('playful');
+          memberRef.child(memberId).child('setaria').set(false);
+          moved = true;
+        }
+      }
+      // えさを表示しているかどうか
+      else if (member.feed) {
+        if (rnd(0.5)) {
+          neko.setPlace(memberId);
+          neko.setState('eating');
+          memberRef.child(memberId).child('feed').set(false);
+          moved = true;
+        }
+      }
+    }
+
+    // どこにも移動しなかったときは、ランダムで場所が変わるかも
+    if (!moved) {
+      if (rnd(0.1)) {
+        let ids = Object.keys(members);
+        let nextId = randomChoose(ids);
+        if (nextId) {
+          neko.setPlace(nextId);
+
+          // ランダムに状態遷移する
+          let nextState = randomChoose(status);
+          if (nextState) {
+            neko.setState(nextState);
+          }
         }
       }
     }
   }
 
-  // 空腹度が減る
-  if (neko.getHungry() > 0) {
-    neko.addHungry(-0.001);
+  // 空腹度が増える
+  if (neko.getHungry()) {
+    neko.addHungry(0.001);
   }
 
   // うんこ度をチェックして、うんこ度が1を超えていたらうんこする。うんこ度は0になる。
   if (neko.getUnko() >= 1) {
     let place = neko.getPlace();
-    if (place && members.indexOf(place) > 0) {
+    if (place && members[place]) {
       bomb(place);
       neko.setUnko(0);
     }
