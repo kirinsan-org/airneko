@@ -25,14 +25,23 @@
       <dd>{{neko.unko}}</dd>
     </dl>
 
-    <h2>移動</h2>
+    <h3>なつき度</h3>
+
+    <dl class="dl-horizontal" ng-if="neko">
+      <div ng-repeat="(key, value) in members">
+        <dt>{{value.name}}</dt>
+        <dd>{{neko.natsuki[key]}}</dd>
+      </div>
+    </dl>
+
+    <h3>移動</h3>
 
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-default" ng-repeat="(key, value) in members" ng-click="setPlace(key)">{{value.name}}</button>
       <button type="button" class="btn btn-default" ng-click="setPlace('none')">いない</button>
     </div>
 
-    <h2>状態</h2>
+    <h3>状態</h3>
 
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-default" ng-click="setState('sleeping')">寝ている</button>
@@ -45,14 +54,14 @@
       <button type="button" class="btn btn-default" ng-click="setState('escapade')">いたずら実行中</button>
     </div>
 
-    <h2>空腹度</h2>
+    <h3>空腹度</h3>
 
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-default" ng-click="addHungry(0.1)">+10%</button>
       <button type="button" class="btn btn-default" ng-click="addHungry(-0.1)">-10%</button>
     </div>
 
-    <h2>うんこ度</h2>
+    <h3>うんこ度</h3>
 
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-default" ng-click="addUnko(0.1)">+10%</button>
