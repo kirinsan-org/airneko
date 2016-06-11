@@ -12,6 +12,8 @@ import ReactiveCocoa
 final class CatView: UIView {
 	
 	let imageView = UIImageView()
+	
+	var isInAnimation = false
 
 	var modelDisposable: Disposable?
 	var model: Cat? {
