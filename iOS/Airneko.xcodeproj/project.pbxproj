@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
+		BFDBF6EB1D0BEB09003AC38B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */; };
+		BFDBF6EE1D0BEB09003AC38B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EC1D0BEB09003AC38B /* Main.storyboard */; };
+		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
+		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
+		BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6FF1D0BEC0F003AC38B /* .gitignore */; };
+		FCC33676D521583688564016 /* Pods_Airneko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65906EB1010B091807BA1707 /* Pods_Airneko.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65906EB1010B091807BA1707 /* Pods_Airneko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airneko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
+		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFDBF6ED1D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFDBF6F21D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFDBF6F41D0BEB09003AC38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDBF6FF1D0BEC0F003AC38B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFDBF6E21D0BEB09003AC38B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC33676D521583688564016 /* Pods_Airneko.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03CDEC241CA4F1068B9F75E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65906EB1010B091807BA1707 /* Pods_Airneko.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F9A0E3C7F1D1AB9E98405F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */,
+				E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFDBF6DC1D0BEB09003AC38B = {
+			isa = PBXGroup;
+			children = (
+				BFDBF6FF1D0BEC0F003AC38B /* .gitignore */,
+				BFDBF6E71D0BEB09003AC38B /* Airneko */,
+				BFDBF6E61D0BEB09003AC38B /* Products */,
+				9F9A0E3C7F1D1AB9E98405F9 /* Pods */,
+				03CDEC241CA4F1068B9F75E2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFDBF6E61D0BEB09003AC38B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBF6E51D0BEB09003AC38B /* Airneko.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFDBF6E71D0BEB09003AC38B /* Airneko */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */,
+				BFDBF6EA1D0BEB09003AC38B /* ViewController.swift */,
+				BFDBF6FA1D0BEB3E003AC38B /* Resources */,
+			);
+			path = Airneko;
+			sourceTree = "<group>";
+		};
+		BFDBF6FA1D0BEB3E003AC38B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBF6EC1D0BEB09003AC38B /* Main.storyboard */,
+				BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */,
+				BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */,
+				BFDBF6F41D0BEB09003AC38B /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFDBF6E41D0BEB09003AC38B /* Airneko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFDBF6F71D0BEB09003AC38B /* Build configuration list for PBXNativeTarget "Airneko" */;
+			buildPhases = (
+				B2F65E87068AE3331DC8A3D4 /* 📦 Check Pods Manifest.lock */,
+				BFDBF6E11D0BEB09003AC38B /* Sources */,
+				BFDBF6E21D0BEB09003AC38B /* Frameworks */,
+				BFDBF6E31D0BEB09003AC38B /* Resources */,
+				9B3C45396678DC5F30728BAF /* 📦 Embed Pods Frameworks */,
+				BB9BC54769538922A31B6030 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Airneko;
+			productName = Airneko;
+			productReference = BFDBF6E51D0BEB09003AC38B /* Airneko.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDBF6DD1D0BEB09003AC38B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "eje Inc.";
+				TargetAttributes = {
+					BFDBF6E41D0BEB09003AC38B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = BFDBF6E01D0BEB09003AC38B /* Build configuration list for PBXProject "Airneko" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFDBF6DC1D0BEB09003AC38B;
+			productRefGroup = BFDBF6E61D0BEB09003AC38B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFDBF6E41D0BEB09003AC38B /* Airneko */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFDBF6E31D0BEB09003AC38B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */,
+				BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */,
+				BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */,
+				BFDBF6EE1D0BEB09003AC38B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B3C45396678DC5F30728BAF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Airneko/Pods-Airneko-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2F65E87068AE3331DC8A3D4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB9BC54769538922A31B6030 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Airneko/Pods-Airneko-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFDBF6E11D0BEB09003AC38B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDBF6EB1D0BEB09003AC38B /* ViewController.swift in Sources */,
+				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFDBF6EC1D0BEB09003AC38B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFDBF6ED1D0BEB09003AC38B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFDBF6F21D0BEB09003AC38B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFDBF6F51D0BEB09003AC38B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFDBF6F61D0BEB09003AC38B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFDBF6F81D0BEB09003AC38B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Airneko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.airneko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFDBF6F91D0BEB09003AC38B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Airneko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.airneko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFDBF6E01D0BEB09003AC38B /* Build configuration list for PBXProject "Airneko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDBF6F51D0BEB09003AC38B /* Debug */,
+				BFDBF6F61D0BEB09003AC38B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFDBF6F71D0BEB09003AC38B /* Build configuration list for PBXNativeTarget "Airneko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDBF6F81D0BEB09003AC38B /* Debug */,
+				BFDBF6F91D0BEB09003AC38B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDBF6DD1D0BEB09003AC38B /* Project object */;
+}
