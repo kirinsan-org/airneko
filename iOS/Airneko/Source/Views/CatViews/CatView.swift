@@ -17,7 +17,20 @@ final class CatView: UIView {
 	weak var delegate: CatViewDelegate?
 	
 	private let background = UIImageView()
+	
 	let catView = UIImageView()
+	let itemView = UIImageView()
+	
+	weak var itemButton: UIButton? {
+		didSet {
+			if let superview = oldValue?.superview where superview == self {
+				oldValue?.removeFromSuperview()
+			}
+			if let view = self.itemButton {
+				addSubview(view)
+			}
+		}
+	}
 	
 	var isInAnimation = false
 	
@@ -33,11 +46,14 @@ final class CatView: UIView {
 		return images
 	}()
 	
+	private let esaImage = UIImage(named: "Item_Esa") ?? UIImage()
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		background.image = UIImage(named: "Background")
+		background.image = UIImage(named: "Background")		
 		addSubview(background)
 		addSubview(catView)
+		addSubview(itemView)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -47,11 +63,31 @@ final class CatView: UIView {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		background.frame = self.bounds
-		background.contentMode = .ScaleAspectFill
-		background.center = self.center
-		catView.frame.size = CGSize(width: frame.width * 0.8, height: frame.width * 0.8)
-		catView.center = self.center
+		do {
+			let view = background
+			view.frame = self.bounds
+			view.contentMode = .ScaleAspectFill
+			view.center = self.center
+		}
+		
+		do {
+			let view = catView
+			view.frame.size = CGSize(width: frame.width * 0.8, height: frame.width * 0.8)
+			view.center = self.center
+		}
+		
+		do {
+			let view = itemView
+			view.frame.size = CGSize(width: frame.width * 0.4, height: frame.width * 0.4)
+			view.center.x = frame.width * 0.5
+			view.center.y = frame.height * 0.8
+		}
+		
+		if let view = itemButton {
+			view.frame.size = CGSize(width: frame.width * 0.2, height: frame.width * 0.2)
+			view.center.x = frame.width * 0.5
+			view.center.y = frame.height * 0.2
+		}
 		
 	}
 
@@ -94,6 +130,14 @@ extension CatView {
 			self.animateCat(state, lastFrame: frame)
 		}
 		
+	}
+	
+}
+
+extension CatView {
+	
+	func addEsa() {
+		itemView.image = esaImage
 	}
 	
 }

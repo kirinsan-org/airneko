@@ -37,11 +37,25 @@ final class CatViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		catView.startObservingCatStatus()
+		
+		let button = UIButton()
+		let buttonImage = UIImage(named: "Feed")
+		button.setImage(buttonImage, forState: .Normal)
+		button.addTarget(self, action: #selector(CatViewController.addEsa), forControlEvents: .TouchUpInside)
+		catView.itemButton = button
 	}
 
 //	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //		catView.doAnimation()
 //	}
+	
+}
+
+extension CatViewController {
+	
+	func addEsa() {
+		catView.addEsa()
+	}
 	
 }
 
