@@ -20,6 +20,16 @@
 		798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */; };
 		798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */; };
 		798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B441D0C74A5008AAF9D /* Title@2x.png */; };
+		BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */; };
+		BF6155DD1D0CEFCC000F307C /* nyaa1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D51D0CEFCC000F307C /* nyaa1.wav */; };
+		BF6155DE1D0CEFCC000F307C /* nyaa2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D61D0CEFCC000F307C /* nyaa2.wav */; };
+		BF6155DF1D0CEFCC000F307C /* nyaa3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D71D0CEFCC000F307C /* nyaa3.wav */; };
+		BF6155E01D0CEFCC000F307C /* nyaa4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D81D0CEFCC000F307C /* nyaa4.wav */; };
+		BF6155E11D0CEFCC000F307C /* nyaa5.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D91D0CEFCC000F307C /* nyaa5.wav */; };
+		BF6155E21D0CEFCC000F307C /* nyaa6.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DA1D0CEFCC000F307C /* nyaa6.wav */; };
+		BF6155E31D0CEFCC000F307C /* nyaa7.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DB1D0CEFCC000F307C /* nyaa7.wav */; };
+		BF6155E41D0CEFCC000F307C /* nyaa8.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DC1D0CEFCC000F307C /* nyaa8.wav */; };
+		BF6155E61D0CF65D000F307C /* NyaaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */; };
 		799A08421D0CB2DD00C0B4ED /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A08411D0CB2DD00C0B4ED /* GCD.swift */; };
 		799A08451D0CE30600C0B4ED /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08441D0CE30600C0B4ED /* Background@2x.png */; };
 		799A084C1D0CEE6600C0B4ED /* Feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08461D0CEE6600C0B4ED /* Feed@2x.png */; };
@@ -60,6 +70,16 @@
 		799A084A1D0CEE6600C0B4ED /* Item_Kuso@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item_Kuso@2x.png"; sourceTree = "<group>"; };
 		799A084B1D0CEE6600C0B4ED /* Nekojarashi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nekojarashi@2x.png"; sourceTree = "<group>"; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		BF6155D51D0CEFCC000F307C /* nyaa1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa1.wav; sourceTree = "<group>"; };
+		BF6155D61D0CEFCC000F307C /* nyaa2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa2.wav; sourceTree = "<group>"; };
+		BF6155D71D0CEFCC000F307C /* nyaa3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa3.wav; sourceTree = "<group>"; };
+		BF6155D81D0CEFCC000F307C /* nyaa4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa4.wav; sourceTree = "<group>"; };
+		BF6155D91D0CEFCC000F307C /* nyaa5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa5.wav; sourceTree = "<group>"; };
+		BF6155DA1D0CEFCC000F307C /* nyaa6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa6.wav; sourceTree = "<group>"; };
+		BF6155DB1D0CEFCC000F307C /* nyaa7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa7.wav; sourceTree = "<group>"; };
+		BF6155DC1D0CEFCC000F307C /* nyaa8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa8.wav; sourceTree = "<group>"; };
+		BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyaaPlayer.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				798B3B301D0C6F69008AAF9D /* Cat.swift */,
+				BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */,
+				BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +228,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF6155D41D0CEFCC000F307C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF6155D51D0CEFCC000F307C /* nyaa1.wav */,
+				BF6155D61D0CEFCC000F307C /* nyaa2.wav */,
+				BF6155D71D0CEFCC000F307C /* nyaa3.wav */,
+				BF6155D81D0CEFCC000F307C /* nyaa4.wav */,
+				BF6155D91D0CEFCC000F307C /* nyaa5.wav */,
+				BF6155DA1D0CEFCC000F307C /* nyaa6.wav */,
+				BF6155DB1D0CEFCC000F307C /* nyaa7.wav */,
+				BF6155DC1D0CEFCC000F307C /* nyaa8.wav */,
+			);
+			name = Sounds;
+			path = Resource/Sounds;
+			sourceTree = "<group>";
+		};
 		BFDBF6DC1D0BEB09003AC38B = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +279,7 @@
 			children = (
 				799A08431D0CE30600C0B4ED /* CatView */,
 				798B3B3F1D0C74A5008AAF9D /* EntranceView */,
+				BF6155D41D0CEFCC000F307C /* Sounds */,
 				BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */,
 				BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */,
 				BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */,
@@ -315,6 +354,11 @@
 				BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */,
 				799A084F1D0CEE6600C0B4ED /* Item_G@2x.png in Resources */,
 				798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */,
+				BF6155E41D0CEFCC000F307C /* nyaa8.wav in Resources */,
+				BF6155E21D0CEFCC000F307C /* nyaa6.wav in Resources */,
+				BF6155E11D0CEFCC000F307C /* nyaa5.wav in Resources */,
+				BF6155E31D0CEFCC000F307C /* nyaa7.wav in Resources */,
+				BF6155DD1D0CEFCC000F307C /* nyaa1.wav in Resources */,
 				798B3B451D0C74A5008AAF9D /* CreateFamilyButton@2x.png in Resources */,
 				BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */,
 				BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */,
@@ -322,10 +366,13 @@
 				798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */,
 				799A084D1D0CEE6600C0B4ED /* Item_Can@2x.png in Resources */,
 				BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */,
+				BF6155DF1D0CEFCC000F307C /* nyaa3.wav in Resources */,
+				BF6155DE1D0CEFCC000F307C /* nyaa2.wav in Resources */,
 				799A08451D0CE30600C0B4ED /* Background@2x.png in Resources */,
 				799A08501D0CEE6600C0B4ED /* Item_Kuso@2x.png in Resources */,
 				799A08511D0CEE6600C0B4ED /* Nekojarashi@2x.png in Resources */,
 				798B3B461D0C74A5008AAF9D /* ExistingFamilyButton@2x.png in Resources */,
+				BF6155E01D0CEFCC000F307C /* nyaa4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +436,13 @@
 				798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */,
 				798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
+				BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */,
 				798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */,
 				798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */,
 				798B3B341D0C6F78008AAF9D /* CatView.swift in Sources */,
 				798B3B381D0C718E008AAF9D /* Extensions.swift in Sources */,
 				798B3B3C1D0C72D9008AAF9D /* EntranceController.swift in Sources */,
+				BF6155E61D0CF65D000F307C /* NyaaPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

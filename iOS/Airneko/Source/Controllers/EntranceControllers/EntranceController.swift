@@ -54,6 +54,10 @@ class EntranceController: UIViewController {
 		
 		entranceView.startCloudsRunningAnimation(withDuration: 2)
 	}
+
+	override func preferredStatusBarStyle() -> UIStatusBarStyle {
+		return .LightContent
+	}
 	
 }
 

@@ -45,6 +45,10 @@ final class CatViewController: UIViewController {
 		catView.itemButton = button
 	}
 
+	override func preferredStatusBarStyle() -> UIStatusBarStyle {
+		return .LightContent
+	}
+
 //	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //		catView.doAnimation()
 //	}
