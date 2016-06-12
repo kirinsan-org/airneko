@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import ReactiveCocoa
+import Result
 
 final class Cat {
 	
@@ -26,15 +27,15 @@ final class Cat {
 	}
 
 	enum Place: Equatable {
-		case Member(String) // 誰かのところ
-		case Some // 誰かのところではないどこか
+		case Here // ここ
+		case Elsewhere // ここではないどこか
 	}
 
 	let name = MutableProperty<String>("")
 	let state = MutableProperty<State>(.Idle)
-	let place = MutableProperty<Place>(.Some)
 	let hungry = MutableProperty<Float>(0)
 	let unko = MutableProperty<Float>(0)
+	let place: AnyProperty<Place>
 
 	let firebaseReference: FIRDatabaseReference
 
@@ -44,6 +45,9 @@ final class Cat {
 
 	init(firebaseReference ref: FIRDatabaseReference = defaultFirebaseReference) {
 		firebaseReference = ref
+
+		let (placeSignal, placeObserver) = Signal<Place, NoError>.pipe()
+		place = AnyProperty(initialValue: .Elsewhere, signal: placeSignal)
 
 		ref.observeEventType(FIRDataEventType.Value, withBlock: { [weak self] snapshot in
 			guard let dictionary = snapshot.value as? [String : AnyObject] else {
@@ -55,10 +59,10 @@ final class Cat {
 			if let value = dictionary["name"] as? String {
 				self?.name.value = value
 			}
-			if let value = dictionary["place"] as? String {
-				self?.place.value = .Member(value)
+			if let value = dictionary["place"] as? String where value == MemberID.currentID {
+				placeObserver.sendNext(.Here)
 			} else {
-				self?.place.value = .Some
+				placeObserver.sendNext(.Elsewhere)
 			}
 			if let value = dictionary["hungry"] as? Float {
 				self?.hungry.value = value
@@ -67,16 +71,5 @@ final class Cat {
 				self?.unko.value = value
 			}
 		})
-	}
-}
-
-func ==(lhs: Cat.Place, rhs: Cat.Place) -> Bool {
-	switch (lhs, rhs) {
-	case (.Member(let user1), .Member(let user2)):
-		return user1 == user2
-	case (.Some, .Some):
-		return true
-	default:
-		return false
 	}
 }

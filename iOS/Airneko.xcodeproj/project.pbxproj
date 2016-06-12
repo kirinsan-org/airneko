@@ -29,6 +29,7 @@
 		799A084F1D0CEE6600C0B4ED /* Item_G@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08491D0CEE6600C0B4ED /* Item_G@2x.png */; };
 		799A08501D0CEE6600C0B4ED /* Item_Kuso@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A084A1D0CEE6600C0B4ED /* Item_Kuso@2x.png */; };
 		799A08511D0CEE6600C0B4ED /* Nekojarashi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A084B1D0CEE6600C0B4ED /* Nekojarashi@2x.png */; };
+		BF6155F01D0D1028000F307C /* MemberID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155EF1D0D1028000F307C /* MemberID.swift */; };
 		BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */; };
 		BF6155DD1D0CEFCC000F307C /* nyaa1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D51D0CEFCC000F307C /* nyaa1.wav */; };
 		BF6155DE1D0CEFCC000F307C /* nyaa2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D61D0CEFCC000F307C /* nyaa2.wav */; };
@@ -82,6 +83,7 @@
 		BF6155DB1D0CEFCC000F307C /* nyaa7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa7.wav; sourceTree = "<group>"; };
 		BF6155DC1D0CEFCC000F307C /* nyaa8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa8.wav; sourceTree = "<group>"; };
 		BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyaaPlayer.swift; sourceTree = "<group>"; };
+		BF6155EF1D0D1028000F307C /* MemberID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberID.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				798B3B301D0C6F69008AAF9D /* Cat.swift */,
+				BF6155EF1D0D1028000F307C /* MemberID.swift */,
 				BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */,
 				BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */,
 				793329321D0D1AA200AEBFBB /* ShakeManager.swift */,
@@ -439,6 +442,7 @@
 				798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */,
 				798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
+				BF6155F01D0D1028000F307C /* MemberID.swift in Sources */,
 				BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */,
 				793329331D0D1AA200AEBFBB /* ShakeManager.swift in Sources */,
 				798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */,
