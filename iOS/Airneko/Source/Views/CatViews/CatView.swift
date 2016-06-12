@@ -9,10 +9,15 @@
 import UIKit
 
 protocol CatViewDelegate: class {
+	func getCatePlace() -> Cat.Place
 	func getCatState() -> Cat.State
 }
 
 final class CatView: UIView {
+	
+	enum Item {
+		case Can, Goki, Kuso
+	}
 	
 	enum AnimationType {
 		enum WalkingDirection {
@@ -76,6 +81,8 @@ final class CatView: UIView {
 	
 	private let esaImage = UIImage(named: "Item_Esa")
 	private let unkoImage = UIImage(named: "Item_Kuso")
+	private let canImage = UIImage(named: "Item_Can")
+	private let gImage = UIImage(named: "Item_G")
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -141,7 +148,23 @@ extension CatView {
 		
 		let currentTime = NSDate()
 		
+		guard let place = delegate?.getCatePlace() where place.isHere else {
+			GCD.runAsynchronizedQueue(with: { [unowned self] in
+				self.catView.hidden = true
+			})
+			GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) { [unowned self] in
+				self.animateCat(nil, lastFrame: nil)
+			}
+			return
+		}
+		
 		guard let state = delegate?.getCatState(), type = AnimationType(catState: state), images = animationImages[type.animationImageNamePrefix] else {
+			GCD.runAsynchronizedQueue(with: { [unowned self] in
+				self.catView.hidden = true
+			})
+			GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) { [unowned self] in
+				self.animateCat(nil, lastFrame: nil)
+			}
 			return
 		}
 		
@@ -156,11 +179,12 @@ extension CatView {
 			frame = 0
 		}
 		
-		GCD.runAsynchronizedQueue(at: .Main) {
+		GCD.runAsynchronizedQueue(at: .Main) { [unowned self] in
+			self.catView.hidden = false
 			self.catView.image = images[frame]
 		}
 		
-		GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) {
+		GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) { [unowned self] in
 			self.animateCat(state, lastFrame: frame)
 		}
 		
@@ -213,10 +237,31 @@ extension CatView {
 		
 	}
 	
-	func receiveUnko() {
-		itemView.image = unkoImage
+	func receiveItem(item: Item) {
+		switch item {
+		case .Can:
+			itemView.image = canImage
+			
+		case .Goki:
+			itemView.image = gImage
+			
+		case .Kuso:
+			itemView.image = unkoImage
+		}
 	}
 	
+}
+
+extension Cat.Place {
+	var isHere: Bool {
+		switch self {
+		case .Here:
+			return true
+			
+		case .Elsewhere:
+			return false
+		}
+	}
 }
 
 extension CatView.AnimationType {
