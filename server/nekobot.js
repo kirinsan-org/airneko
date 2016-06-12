@@ -3,6 +3,7 @@
  */
 const db = require('./lib/db.js');
 const Neko = require('./Neko.js');
+const NotificationSender = require('./lib/push.js');
 
 let familyRef = db.ref('family/sample');
 let nekoRef = familyRef.child('neko/sampleneko');
@@ -72,9 +73,10 @@ function loop() {
     let isEscapade = rnd(neko.getHungry()); // 空腹度が高いほどいたずらになりやすい
     if (isEscapade) {
 
-      // TODO いたずらを実行する。
+      // いたずらを実行する。
       neko.setPlace('other'); // いたずらを実行する時は誰の場所にも現れない。
       neko.setState('escapade');
+      NotificationSender.sendNotification(); // いたずらしていることを通知する
 
       // 誰かのところにGを置く
       let memberId = randomChoose(Object.keys(members));

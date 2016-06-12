@@ -1,4 +1,5 @@
 const db = require('../lib/db.js');
+const NotificationSender = require('../lib/push.js');
 
 let statusRef = db.ref('status');
 let familyRef = db.ref('family/sample');
@@ -52,6 +53,13 @@ angular.module('App', ['firebase'])
      */
     $scope.putFeed = (memberId) => {
       memberRef.child(memberId).child('item').set('feed');
+    };
+
+    /**
+     * にゃー
+     */
+    $scope.sendNotification = () => {
+      NotificationSender.sendNotification();
     };
 
   });
