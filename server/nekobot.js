@@ -49,9 +49,7 @@ function randomChoose(array) {
  * 指定したメンバーのところにうんこをする
  */
 function bomb(memberId) {
-  memberRef.child(memberId).child('unko').transaction(currentVal => {
-    return currentVal + 1;
-  });
+  memberRef.child(memberId).child('item').set('unko');
 }
 
 let neko = new Neko(nekoRef);
