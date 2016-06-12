@@ -131,7 +131,7 @@ function loop() {
       let member = members[memberId];
 
       // ねこじゃらしを表示しているかどうか
-      if (member.item === 'setaria') {
+      if (member.item === 'jarashi') {
         if (rnd(0.5)) {
           neko.setPlace(memberId);
           neko.setState('playful');
