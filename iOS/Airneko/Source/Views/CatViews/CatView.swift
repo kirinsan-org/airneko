@@ -357,7 +357,7 @@ extension CatView.AnimationType {
 			return "playful"
 			
 		case .Yawn:
-			return "Yawn"
+			return "yawn"
 			
 		case .Delightful:
 			return "delightful"
