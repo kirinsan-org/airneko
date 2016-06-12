@@ -1,6 +1,7 @@
 /**
  * 仮想ネコ
  */
+const request = require('request');
 const db = require('./lib/db.js');
 const Neko = require('./Neko.js');
 const NotificationSender = require('./lib/push.js');
@@ -130,7 +131,7 @@ function loop() {
       let member = members[memberId];
 
       // ねこじゃらしを表示しているかどうか
-      if (member.item === 'setaria') {
+      if (member.item === 'jarashi') {
         if (rnd(0.5)) {
           neko.setPlace(memberId);
           neko.setState('playful');
