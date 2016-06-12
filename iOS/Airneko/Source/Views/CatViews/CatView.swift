@@ -15,6 +15,10 @@ protocol CatViewDelegate: class {
 
 final class CatView: UIView {
 	
+	enum Item {
+		case Can, Goki, Kuso
+	}
+	
 	enum AnimationType {
 		enum WalkingDirection {
 			case Left, Right
@@ -77,6 +81,8 @@ final class CatView: UIView {
 	
 	private let esaImage = UIImage(named: "Item_Esa")
 	private let unkoImage = UIImage(named: "Item_Kuso")
+	private let canImage = UIImage(named: "Item_Can")
+	private let gImage = UIImage(named: "Item_G")
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -231,8 +237,17 @@ extension CatView {
 		
 	}
 	
-	func receiveUnko() {
-		itemView.image = unkoImage
+	func receiveItem(item: Item) {
+		switch item {
+		case .Can:
+			itemView.image = canImage
+			
+		case .Goki:
+			itemView.image = gImage
+			
+		case .Kuso:
+			itemView.image = unkoImage
+		}
 	}
 	
 }
