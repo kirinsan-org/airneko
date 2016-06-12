@@ -22,6 +22,7 @@ final class Cat {
 		case Eating = "eating" // eating
 		case Unko = "unko" // unko
 		case Escapade = "escapade"
+		
 	}
 
 	enum Place: Equatable {

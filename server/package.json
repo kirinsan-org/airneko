@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd www && bower install",
+    "start": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-prebuilt": "^1.2.2",
+    "firebase": "^3.0.4",
+    "bower": "*"
+  }
+}

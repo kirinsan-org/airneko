@@ -32,16 +32,16 @@ extension CatView {
 				
 		UIView.animateKeyframesWithDuration(0.4, delay: 0, options: .CalculationModeCubic, animations: {
 			UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.25) {
-				self.imageView.frame.origin.y -= 70
+				self.catView.frame.origin.y -= 70
 			}
 			UIView.addKeyframeWithRelativeStartTime(0.25, relativeDuration: 0.3, animations: {
 				self.layoutSubviews()
 			})
 			UIView.addKeyframeWithRelativeStartTime(0.55, relativeDuration: 0.5, animations: {
-				self.imageView.frame.origin.y += 50
-				self.imageView.frame.origin.x -= 20
-				self.imageView.frame.size.height -= 50
-				self.imageView.frame.size.width += 40
+				self.catView.frame.origin.y += 50
+				self.catView.frame.origin.x -= 20
+				self.catView.frame.size.height -= 50
+				self.catView.frame.size.width += 40
 			})
 			UIView.addKeyframeWithRelativeStartTime(0.8, relativeDuration: 0.2, animations: {
 				self.layoutSubviews()
@@ -58,35 +58,35 @@ extension CatView {
 		
 		isInAnimation = true
 		
-		let currentPosition = imageView.frame
+		let currentPosition = catView.frame
 		let leftMoveLength = currentPosition.origin.x
-		let rightMoveLength = self.frame.width - imageView.frame.width - leftMoveLength
+		let rightMoveLength = self.frame.width - catView.frame.width - leftMoveLength
 		
 		UIView.animateKeyframesWithDuration(4, delay: 0, options: .CalculationModeCubic, animations: {
 			
 			UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.2, animations: {
 				let transform = CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: -leftMoveLength, ty: 0)
-				self.imageView.transform = transform
+				self.catView.transform = transform
 			})
 			
 			UIView.addKeyframeWithRelativeStartTime(0.2, relativeDuration: 0.1, animations: {
 				let transform = CGAffineTransform(a: -1, b: 0, c: 0, d: 1, tx: -leftMoveLength, ty: 0)
-				self.imageView.transform = transform
+				self.catView.transform = transform
 			})
 			
 			UIView.addKeyframeWithRelativeStartTime(0.3, relativeDuration: 0.4, animations: {
 				let transform = CGAffineTransform(a: -1, b: 0, c: 0, d: 1, tx: rightMoveLength, ty: 0)
-				self.imageView.transform = transform
+				self.catView.transform = transform
 			})
 			
 			UIView.addKeyframeWithRelativeStartTime(0.7, relativeDuration: 0.1, animations: {
 				let transform = CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: rightMoveLength, ty: 0)
-				self.imageView.transform = transform
+				self.catView.transform = transform
 			})
 			
 			UIView.addKeyframeWithRelativeStartTime(0.8, relativeDuration: 0.2, animations: {
 				let transform = CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0)
-				self.imageView.transform = transform
+				self.catView.transform = transform
 			})
 			
 		}) { (_) in

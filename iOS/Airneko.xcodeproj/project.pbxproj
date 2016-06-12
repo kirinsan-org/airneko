@@ -30,6 +30,14 @@
 		BF6155E31D0CEFCC000F307C /* nyaa7.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DB1D0CEFCC000F307C /* nyaa7.wav */; };
 		BF6155E41D0CEFCC000F307C /* nyaa8.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DC1D0CEFCC000F307C /* nyaa8.wav */; };
 		BF6155E61D0CF65D000F307C /* NyaaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */; };
+		799A08421D0CB2DD00C0B4ED /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A08411D0CB2DD00C0B4ED /* GCD.swift */; };
+		799A08451D0CE30600C0B4ED /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08441D0CE30600C0B4ED /* Background@2x.png */; };
+		799A084C1D0CEE6600C0B4ED /* Feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08461D0CEE6600C0B4ED /* Feed@2x.png */; };
+		799A084D1D0CEE6600C0B4ED /* Item_Can@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08471D0CEE6600C0B4ED /* Item_Can@2x.png */; };
+		799A084E1D0CEE6600C0B4ED /* Item_Esa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08481D0CEE6600C0B4ED /* Item_Esa@2x.png */; };
+		799A084F1D0CEE6600C0B4ED /* Item_G@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08491D0CEE6600C0B4ED /* Item_G@2x.png */; };
+		799A08501D0CEE6600C0B4ED /* Item_Kuso@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A084A1D0CEE6600C0B4ED /* Item_Kuso@2x.png */; };
+		799A08511D0CEE6600C0B4ED /* Nekojarashi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A084B1D0CEE6600C0B4ED /* Nekojarashi@2x.png */; };
 		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
@@ -53,6 +61,14 @@
 		798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashBottom@2x.png"; sourceTree = "<group>"; };
 		798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashClouds@2x.png"; sourceTree = "<group>"; };
 		798B3B441D0C74A5008AAF9D /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title@2x.png"; sourceTree = "<group>"; };
+		799A08411D0CB2DD00C0B4ED /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		799A08441D0CE30600C0B4ED /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		799A08461D0CEE6600C0B4ED /* Feed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed@2x.png"; sourceTree = "<group>"; };
+		799A08471D0CEE6600C0B4ED /* Item_Can@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item_Can@2x.png"; sourceTree = "<group>"; };
+		799A08481D0CEE6600C0B4ED /* Item_Esa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item_Esa@2x.png"; sourceTree = "<group>"; };
+		799A08491D0CEE6600C0B4ED /* Item_G@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item_G@2x.png"; sourceTree = "<group>"; };
+		799A084A1D0CEE6600C0B4ED /* Item_Kuso@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item_Kuso@2x.png"; sourceTree = "<group>"; };
+		799A084B1D0CEE6600C0B4ED /* Nekojarashi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nekojarashi@2x.png"; sourceTree = "<group>"; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
 		BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		BF6155D51D0CEFCC000F307C /* nyaa1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nyaa1.wav; sourceTree = "<group>"; };
@@ -154,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				798B3B371D0C718E008AAF9D /* Extensions.swift */,
+				799A08411D0CB2DD00C0B4ED /* GCD.swift */,
 			);
 			path = ConvenientClasses;
 			sourceTree = "<group>";
@@ -185,6 +202,21 @@
 			);
 			name = EntranceView;
 			path = Resource/EntranceView;
+			sourceTree = "<group>";
+		};
+		799A08431D0CE30600C0B4ED /* CatView */ = {
+			isa = PBXGroup;
+			children = (
+				799A08441D0CE30600C0B4ED /* Background@2x.png */,
+				799A08461D0CEE6600C0B4ED /* Feed@2x.png */,
+				799A08471D0CEE6600C0B4ED /* Item_Can@2x.png */,
+				799A08481D0CEE6600C0B4ED /* Item_Esa@2x.png */,
+				799A08491D0CEE6600C0B4ED /* Item_G@2x.png */,
+				799A084A1D0CEE6600C0B4ED /* Item_Kuso@2x.png */,
+				799A084B1D0CEE6600C0B4ED /* Nekojarashi@2x.png */,
+			);
+			name = CatView;
+			path = Resource/CatView;
 			sourceTree = "<group>";
 		};
 		9F9A0E3C7F1D1AB9E98405F9 /* Pods */ = {
@@ -245,6 +277,7 @@
 		BFDBF6FA1D0BEB3E003AC38B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				799A08431D0CE30600C0B4ED /* CatView */,
 				798B3B3F1D0C74A5008AAF9D /* EntranceView */,
 				BF6155D41D0CEFCC000F307C /* Sounds */,
 				BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */,
@@ -316,8 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799A084E1D0CEE6600C0B4ED /* Item_Esa@2x.png in Resources */,
 				798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */,
 				BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */,
+				799A084F1D0CEE6600C0B4ED /* Item_G@2x.png in Resources */,
 				798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */,
 				BF6155E41D0CEFCC000F307C /* nyaa8.wav in Resources */,
 				BF6155E21D0CEFCC000F307C /* nyaa6.wav in Resources */,
@@ -327,10 +362,15 @@
 				798B3B451D0C74A5008AAF9D /* CreateFamilyButton@2x.png in Resources */,
 				BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */,
 				BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */,
+				799A084C1D0CEE6600C0B4ED /* Feed@2x.png in Resources */,
 				798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */,
+				799A084D1D0CEE6600C0B4ED /* Item_Can@2x.png in Resources */,
 				BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */,
 				BF6155DF1D0CEFCC000F307C /* nyaa3.wav in Resources */,
 				BF6155DE1D0CEFCC000F307C /* nyaa2.wav in Resources */,
+				799A08451D0CE30600C0B4ED /* Background@2x.png in Resources */,
+				799A08501D0CEE6600C0B4ED /* Item_Kuso@2x.png in Resources */,
+				799A08511D0CEE6600C0B4ED /* Nekojarashi@2x.png in Resources */,
 				798B3B461D0C74A5008AAF9D /* ExistingFamilyButton@2x.png in Resources */,
 				BF6155E01D0CEFCC000F307C /* nyaa4.wav in Resources */,
 			);
@@ -391,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799A08421D0CB2DD00C0B4ED /* GCD.swift in Sources */,
 				798B3B3E1D0C7305008AAF9D /* EntranceView.swift in Sources */,
 				798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */,
 				798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */,
