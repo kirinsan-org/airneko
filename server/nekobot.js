@@ -76,6 +76,12 @@ function loop() {
       neko.setPlace('other'); // いたずらを実行する時は誰の場所にも現れない。
       neko.setState('escapade');
 
+      // 誰かのところにGを置く
+      let memberId = randomChoose(Object.keys(members));
+      if (memberId) {
+        memberRef.child(memberId).child('item').set('g');
+      }
+
     } else {
 
       // ランダムに状態遷移する
