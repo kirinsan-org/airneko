@@ -43,6 +43,16 @@ final class CatView: UIView {
 			.Eating,
 			.Unko
 		]
+		
+		var shouldShowNekojarashi: Bool {
+			switch self {
+			case .Playful:
+				return true
+				
+			default:
+				return false
+			}
+		}
 	}
 	
 	weak var delegate: CatViewDelegate?
@@ -51,6 +61,7 @@ final class CatView: UIView {
 	
 	let catView = UIImageView()
 	let itemView = UIImageView()
+	let nekojarashiView = UIImageView()
 	
 	var animationType: AnimationType?
 	
@@ -79,6 +90,14 @@ final class CatView: UIView {
 		return images
 	}()
 	
+	private let nekojarashiImages: [UIImage] = {
+		let images = (0 ..< 4).flatMap({ (i) -> UIImage? in
+			let imageName = String(format: "Nekojarashi%02d", i)
+			return UIImage(named: imageName)
+		})
+		return images
+	}()
+	
 	private let esaImage = UIImage(named: "Item_Esa")
 	private let unkoImage = UIImage(named: "Item_Kuso")
 	private let canImage = UIImage(named: "Item_Can")
@@ -92,9 +111,18 @@ final class CatView: UIView {
 			view.image = UIImage(named: "Background")
 		}
 		
+		do {
+			let view = nekojarashiView
+			view.animationImages = nekojarashiImages
+			view.animationDuration = NSTimeInterval(nekojarashiImages.count) * 0.1
+			view.startAnimating()
+			view.hidden = true
+		}
+		
 		addSubview(background)
 		addSubview(catView)
 		addSubview(itemView)
+		addSubview(nekojarashiView)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -124,6 +152,11 @@ final class CatView: UIView {
 			view.center.y = frame.height * 0.8
 		}
 		
+		do {
+			let view = nekojarashiView
+			view.frame = itemView.frame
+		}
+		
 		if let view = itemButton {
 			view.frame.size = CGSize(width: frame.width * 0.2, height: frame.width * 0.2)
 			view.center.x = frame.width * 0.5
@@ -150,6 +183,7 @@ extension CatView {
 		
 		guard let place = delegate?.getCatePlace() where place.isHere else {
 			GCD.runAsynchronizedQueue(with: { [unowned self] in
+				self.nekojarashiView.hidden = true
 				self.catView.hidden = true
 			})
 			GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) { [unowned self] in
@@ -160,6 +194,7 @@ extension CatView {
 		
 		guard let state = delegate?.getCatState(), type = AnimationType(catState: state), images = animationImages[type.animationImageNamePrefix] else {
 			GCD.runAsynchronizedQueue(with: { [unowned self] in
+				self.nekojarashiView.hidden = true
 				self.catView.hidden = true
 			})
 			GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) { [unowned self] in
@@ -180,6 +215,11 @@ extension CatView {
 		}
 		
 		GCD.runAsynchronizedQueue(at: .Main) { [unowned self] in
+			if type.shouldShowNekojarashi {
+				self.nekojarashiView.hidden = false
+			} else {
+				self.nekojarashiView.hidden = true
+			}
 			self.catView.hidden = false
 			self.catView.image = images[frame]
 		}
