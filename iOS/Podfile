@@ -3,5 +3,6 @@ use_frameworks!
 target 'Airneko' do
 	pod 'Firebase', '~> 3.0'
 	pod 'Firebase/Database'
+	pod 'Firebase/Messaging'
 	pod 'ReactiveCocoa'
 end
