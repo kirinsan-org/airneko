@@ -81,6 +81,7 @@ extension EntranceController {
 		memberButton.center = CGPoint(x: entranceView.bounds.minX + 15, y: entranceView.bounds.maxY - 20)
 		memberButton.setTitle("…", forState: .Normal)
 		memberButton.addTarget(self, action: #selector(EntranceController.memberIDButtonTapped), forControlEvents: .TouchUpInside)
+		entranceView.addSubview(memberButton)
 	}
 
 	func memberIDButtonTapped() {
