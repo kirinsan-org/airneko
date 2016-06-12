@@ -47,4 +47,11 @@ angular.module('App', ['firebase'])
       $scope.neko.unko += value;
     };
 
+    /**
+     * えさを置く
+     */
+    $scope.putFeed = (memberId) => {
+      memberRef.child(memberId).child('item').set('feed');
+    };
+
   });

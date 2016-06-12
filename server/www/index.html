@@ -30,7 +30,10 @@
     <dl class="dl-horizontal" ng-if="neko">
       <div ng-repeat="(key, value) in members">
         <dt>{{value.name}}</dt>
-        <dd>{{neko.natsuki[key]}}</dd>
+        <dd>
+          {{neko.natsuki[key]}}
+          <button class="btn btn-default" ng-click="putFeed(key)">えさ</button>
+        </dd>
       </div>
     </dl>
 

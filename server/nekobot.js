@@ -49,9 +49,7 @@ function randomChoose(array) {
  * 指定したメンバーのところにうんこをする
  */
 function bomb(memberId) {
-  memberRef.child(memberId).child('unko').transaction(currentVal => {
-    return currentVal + 1;
-  });
+  memberRef.child(memberId).child('item').set('unko');
 }
 
 let neko = new Neko(nekoRef);
@@ -77,6 +75,12 @@ function loop() {
       // TODO いたずらを実行する。
       neko.setPlace('other'); // いたずらを実行する時は誰の場所にも現れない。
       neko.setState('escapade');
+
+      // 誰かのところにGを置く
+      let memberId = randomChoose(Object.keys(members));
+      if (memberId) {
+        memberRef.child(memberId).child('item').set('g');
+      }
 
     } else {
 
