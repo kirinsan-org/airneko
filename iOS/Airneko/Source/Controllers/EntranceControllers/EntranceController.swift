@@ -53,6 +53,17 @@ class EntranceController: UIViewController {
 		super.viewDidAppear(animated)
 		
 		entranceView.startCloudsRunningAnimation(withDuration: 2)
+
+		let memberButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
+		memberButton.center = CGPoint(x: entranceView.bounds.minX + 15, y: entranceView.bounds.maxY - 20)
+		memberButton.setTitle("…", forState: .Normal)
+		memberButton.addTarget(self, action: #selector(EntranceController.memberIDButtonTapped), forControlEvents: .TouchUpInside)
+		entranceView.addSubview(memberButton)
+
+		if MemberID.currentID == nil {
+			let controller = MemberID.currentIDSetupDialogViewController()
+			presentViewController(controller, animated: true, completion: nil)
+		}
 	}
 
 	override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -70,4 +81,20 @@ extension EntranceController {
 		
 	}
 	
+}
+
+extension EntranceController {
+
+	func addMemberIDButton() {
+		let memberButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+		memberButton.center = CGPoint(x: entranceView.bounds.midX, y: entranceView.bounds.maxY + 10)
+		memberButton.setTitle("🆔", forState: .Normal)
+		entranceView.addSubview(memberButton)
+	}
+
+	func memberIDButtonTapped() {
+		let controller = MemberID.currentIDSetupDialogViewController()
+		presentViewController(controller, animated: true, completion: nil)
+	}
+
 }
