@@ -53,6 +53,27 @@ function bomb(memberId) {
   memberRef.child(memberId).child('item').set('unko');
 }
 
+function itazura() {
+  // 誰かのところにGを置く
+  if (rnd(0.5)) {
+    let memberId = randomChoose(Object.keys(members));
+    if (memberId) {
+      memberRef.child(memberId).child('item').set('g');
+    }
+  } else {
+    // ツイートする
+    familyRef.child('ifttt/test').once('value')
+      .then(snapshot => {
+        let requestParams = snapshot.val();
+        if (requestParams) {
+          request(requestParams, (err, res) => {
+            console.log(err, res && res.toJSON && res.toJSON());
+          });
+        }
+      });
+  }
+}
+
 let neko = new Neko(nekoRef);
 
 /**
@@ -79,10 +100,7 @@ function loop() {
       NotificationSender.sendNotification(); // いたずらしていることを通知する
 
       // 誰かのところにGを置く
-      let memberId = randomChoose(Object.keys(members));
-      if (memberId) {
-        memberRef.child(memberId).child('item').set('g');
-      }
+      itazura();
 
     } else {
 
