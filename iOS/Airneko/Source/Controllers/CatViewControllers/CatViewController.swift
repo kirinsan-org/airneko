@@ -16,6 +16,10 @@ final class CatViewController: UIViewController {
 	private let catView: CatView
 	private let shakeManager: ShakeManager
 	
+	var catPlace: Cat.Place {
+		return catModel.place.value
+	}
+	
 	var catState: Cat.State {
 		return catModel.state.value
 	}
@@ -82,6 +86,10 @@ extension CatViewController {
 }
 
 extension CatViewController: CatViewDelegate {
+	
+	func getCatePlace() -> Cat.Place {
+		return catPlace
+	}
 	
 	func getCatState() -> Cat.State {
 		return catState
