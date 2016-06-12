@@ -14,12 +14,40 @@ protocol CatViewDelegate: class {
 
 final class CatView: UIView {
 	
+	enum AnimationType {
+		enum WalkingDirection {
+			case Left, Right
+		}
+		
+		case Walking(direction: WalkingDirection)
+		case Sleeping
+		case Angry
+		case Playful
+		case Yawn
+		case Delightful
+		case Eating
+		case Unko
+		
+		static let allTypes: [AnimationType] = [
+			.Walking(direction: .Left),
+			.Sleeping,
+			.Angry,
+			.Playful,
+			.Yawn,
+			.Delightful,
+			.Eating,
+			.Unko
+		]
+	}
+	
 	weak var delegate: CatViewDelegate?
 	
 	private let background = UIImageView()
 	
 	let catView = UIImageView()
 	let itemView = UIImageView()
+	
+	var animationType: AnimationType?
 	
 	weak var itemButton: UIButton? {
 		didSet {
@@ -35,12 +63,12 @@ final class CatView: UIView {
 	var isInAnimation = false
 	
 	private let animationImages: [String: [UIImage]] = {
-		let images = Cat.State.allStates.reduce([:]) { (images, nextState) -> [String: [UIImage]] in
+		let images = AnimationType.allTypes.reduce([:]) { (images, nextState) -> [String: [UIImage]] in
 			var images = images
 			let nextStateImages = nextState.animationImageNames.map({ (name) -> UIImage in
 				return UIImage(named: name) ?? UIImage()
 			})
-			images[nextState.rawValue] = nextStateImages
+			images[nextState.animationImageNamePrefix] = nextStateImages
 			return images
 		}
 		return images
@@ -113,7 +141,7 @@ extension CatView {
 		
 		let currentTime = NSDate()
 		
-		guard let state = delegate?.getCatState(), images = animationImages[state.rawValue] else {
+		guard let state = delegate?.getCatState(), type = AnimationType(catState: state), images = animationImages[type.animationImageNamePrefix] else {
 			return
 		}
 		
@@ -191,29 +219,80 @@ extension CatView {
 	
 }
 
-private extension Cat.State {
+extension CatView.AnimationType {
+	
+	init?(catState: Cat.State) {
+		switch catState {
+		case .Idle:
+			self = .Walking(direction: .Left)
+			
+		case .Sleeping:
+			self = .Sleeping
+			
+		case .Angry:
+			self = .Angry
+			
+		case .Playful:
+			self = .Playful
+			
+		case .Yawn:
+			self = .Yawn
+			
+		case .Delightful:
+			self = .Delightful
+			
+		case .Eating:
+			self = .Eating
+			
+		case .Unko:
+			self = .Unko
+			
+		case .Escapade:
+			return nil
+		}
+	}
+	
 	var numberOfAnimationImages: Int {
 		return 4
 	}
+	
 	var animationImageNamePrefix: String {
 		
-		let prefix: String
 		switch self {
+		case .Walking:
+			return "idle"
+			
 		case .Sleeping:
-			prefix = "sleepy"
-		default:
-			prefix = rawValue
+			return "sleepy"
+			
+		case .Angry:
+			return "angry"
+			
+		case .Playful:
+			return "playful"
+			
+		case .Yawn:
+			return "Yawn"
+			
+		case .Delightful:
+			return "delightful"
+			
+		case .Eating:
+			return "eating"
+			
+		case .Unko:
+			return "unko"
 		}
 		
-		return prefix
-		
 	}
+	
 	var animationImageNames: [String] {
-		return Array(0..<numberOfAnimationImages).map { index in
+		return Array(0 ..< numberOfAnimationImages).map { index in
 			let numberString = String(format: "%02d", index)
 			return "\(animationImageNamePrefix)\(numberString)"
 		}
 	}
+	
 	var animationInterval: NSTimeInterval {
 		return Double(numberOfAnimationImages) * 1/10
 	}

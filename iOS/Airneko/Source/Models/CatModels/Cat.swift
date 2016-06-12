@@ -23,17 +23,6 @@ final class Cat {
 		case Unko = "unko" // unko
 		case Escapade = "escapade"
 		
-		static let allStates: [State] = [
-			.Idle,
-			.Sleeping,
-			.Angry,
-			.Playful,
-			.Yawn,
-			.Delightful,
-			.Eating,
-			.Unko,
-			.Escapade,
-		]
 	}
 
 	enum Place: Equatable {
