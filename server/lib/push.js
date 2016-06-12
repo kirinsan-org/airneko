@@ -20,6 +20,8 @@ module.exports = class NotificationSender {
     getAllDeviceIds()
       .then(allDeviceIds => {
 
+        let num = Math.floor(Math.random() * 8) + 1; // 1-8のランダム
+
         // プッシュ通知送信
         request({
           url: 'https://fcm.googleapis.com/fcm/send',
@@ -36,7 +38,7 @@ module.exports = class NotificationSender {
             "notification": {
               "title": "エアねこ",
               "body": "にゃー",
-              "sound": "nyaa1.wav"
+              "sound": `nyaa${num}.wav`
             }
           }
         }, (err, res) => {
