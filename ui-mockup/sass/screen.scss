@@ -1,0 +1,113 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body,html {
+  background-color: #00CCFF;
+  height:100%;
+  width:100%;
+}
+
+@-webkit-keyframes scrolling {
+0% {background-position:0px 0px;}
+100% {background-position:-320px 0px;}}
+
+@-moz-keyframes scrolling {
+0% {background-position:0px 0px;}
+100% {background-position:-320px 0px;}}
+
+@-ms-keyframes scrolling {
+0% {background-position:0px 0px;}
+100% {background-position:-320px 0px;}}
+
+@keyframes scrolling {
+0% {background-position:0px 0px;}
+100% {background-position:-320px 0px;}}
+
+#logo {
+  background-image: url(../images/title.png);
+  background-size:205px 60px;
+  height:100%;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  transition: all 0.5s ease-in-out 0.4s;
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+.launched {
+  #logo {
+    height:300px;
+    background-size:205px*0.8 60px*0.8;
+  }
+  
+}
+
+.splash-images {
+  > div {
+    background-repeat:no-repeat;
+    width:100%;
+    position: absolute;
+    background-size:100%;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .cloud {
+    top:0;
+    background-repeat:repeat-x;
+    background-image:url(../images/bg_splash_cloud.png);
+    -webkit-animation: 16s linear scrolling infinite;
+    -moz-animation: 16s linear scrolling infinite;
+    -ms-animation: 16s linear scrolling infinite;
+    animation: 16s linear scrolling infinite;
+    height:140px;
+  }
+  .roof {
+    bottom:0;
+    background-image:url(../images/bg_splash_bottom.png);
+    height:145px;
+  }
+}
+
+.launched {
+  .splash-images {
+    .cloud {
+      top:-200px;
+    }
+    .roof {
+      bottom:-200px;
+    }
+  }
+}
+
+#intro {
+  position: absolute;
+  transition: top 0.5s ease-in-out 0.4s; 
+  top:140%;
+  width:100%;
+  .launched & {
+    top:40%;
+  }
+  .rooms {
+    text-align:center;
+    li {
+      display:inline-block;
+      box-sizing:border-box;
+      border:3px solid #fff;
+      border-radius:8px;
+      width:150px;
+      height:150px;
+      &:active {
+        transform: scale(0.95);
+      }
+      img {
+        max-width:100%;
+      }
+
+    }
+  }
+}

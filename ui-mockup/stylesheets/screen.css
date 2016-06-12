@@ -1,0 +1,195 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+body, html {
+  background-color: #00CCFF;
+  height: 100%;
+  width: 100%;
+}
+
+@-webkit-keyframes scrolling {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -320px 0px;
+  }
+}
+@-moz-keyframes scrolling {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -320px 0px;
+  }
+}
+@-ms-keyframes scrolling {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -320px 0px;
+  }
+}
+@keyframes scrolling {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -320px 0px;
+  }
+}
+/* line 30, ../sass/screen.scss */
+#logo {
+  background-image: url(../images/title.png);
+  background-size: 205px 60px;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out 0.4s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 44, ../sass/screen.scss */
+.launched #logo {
+  height: 300px;
+  background-size: 164px 48px;
+}
+
+/* line 52, ../sass/screen.scss */
+.splash-images > div {
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  background-size: 100%;
+  transition: all 0.3s ease-in-out 0s;
+}
+/* line 59, ../sass/screen.scss */
+.splash-images .cloud {
+  top: 0;
+  background-repeat: repeat-x;
+  background-image: url(../images/bg_splash_cloud.png);
+  -webkit-animation: 16s linear scrolling infinite;
+  -moz-animation: 16s linear scrolling infinite;
+  -ms-animation: 16s linear scrolling infinite;
+  animation: 16s linear scrolling infinite;
+  height: 140px;
+}
+/* line 69, ../sass/screen.scss */
+.splash-images .roof {
+  bottom: 0;
+  background-image: url(../images/bg_splash_bottom.png);
+  height: 145px;
+}
+
+/* line 78, ../sass/screen.scss */
+.launched .splash-images .cloud {
+  top: -200px;
+}
+/* line 81, ../sass/screen.scss */
+.launched .splash-images .roof {
+  bottom: -200px;
+}
+
+/* line 87, ../sass/screen.scss */
+#intro {
+  position: absolute;
+  transition: top 0.5s ease-in-out 0.4s;
+  top: 140%;
+  width: 100%;
+}
+/* line 92, ../sass/screen.scss */
+.launched #intro {
+  top: 40%;
+}
+/* line 95, ../sass/screen.scss */
+#intro .rooms {
+  text-align: center;
+}
+/* line 97, ../sass/screen.scss */
+#intro .rooms li {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+}
+/* line 104, ../sass/screen.scss */
+#intro .rooms li:active {
+  transform: scale(0.95);
+}
+/* line 107, ../sass/screen.scss */
+#intro .rooms li img {
+  max-width: 100%;
+}

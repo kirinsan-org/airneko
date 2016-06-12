@@ -7,30 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155AA1D0C0A68000F307C /* CatViewController.swift */; };
+		798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B231D0C6E35008AAF9D /* CatViewController.swift */; };
+		798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B2E1D0C6E5B008AAF9D /* ViewController.swift */; };
+		798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B301D0C6F69008AAF9D /* Cat.swift */; };
+		798B3B341D0C6F78008AAF9D /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B321D0C6F78008AAF9D /* CatView.swift */; };
+		798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B331D0C6F78008AAF9D /* CatViewAnimation.swift */; };
+		798B3B381D0C718E008AAF9D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B371D0C718E008AAF9D /* Extensions.swift */; };
+		798B3B3C1D0C72D9008AAF9D /* EntranceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B3B1D0C72D9008AAF9D /* EntranceController.swift */; };
+		798B3B3E1D0C7305008AAF9D /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B3D1D0C7305008AAF9D /* EntranceView.swift */; };
+		798B3B451D0C74A5008AAF9D /* CreateFamilyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B401D0C74A5008AAF9D /* CreateFamilyButton@2x.png */; };
+		798B3B461D0C74A5008AAF9D /* ExistingFamilyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B411D0C74A5008AAF9D /* ExistingFamilyButton@2x.png */; };
+		798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */; };
+		798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */; };
+		798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B441D0C74A5008AAF9D /* Title@2x.png */; };
 		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
 		BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6FF1D0BEC0F003AC38B /* .gitignore */; };
-		BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF7031D0BED13003AC38B /* Cat.swift */; };
 		BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */; };
-		BFDBF7081D0BFEBC003AC38B /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF7071D0BFEBC003AC38B /* CatView.swift */; };
 		FCC33676D521583688564016 /* Pods_Airneko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65906EB1010B091807BA1707 /* Pods_Airneko.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65906EB1010B091807BA1707 /* Pods_Airneko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airneko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		798B3B231D0C6E35008AAF9D /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		798B3B2E1D0C6E5B008AAF9D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		798B3B301D0C6F69008AAF9D /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cat.swift; path = CatModels/Cat.swift; sourceTree = "<group>"; };
+		798B3B321D0C6F78008AAF9D /* CatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		798B3B331D0C6F78008AAF9D /* CatViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewAnimation.swift; sourceTree = "<group>"; };
+		798B3B371D0C718E008AAF9D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		798B3B3B1D0C72D9008AAF9D /* EntranceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceController.swift; sourceTree = "<group>"; };
+		798B3B3D1D0C7305008AAF9D /* EntranceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
+		798B3B401D0C74A5008AAF9D /* CreateFamilyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateFamilyButton@2x.png"; sourceTree = "<group>"; };
+		798B3B411D0C74A5008AAF9D /* ExistingFamilyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ExistingFamilyButton@2x.png"; sourceTree = "<group>"; };
+		798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashBottom@2x.png"; sourceTree = "<group>"; };
+		798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashClouds@2x.png"; sourceTree = "<group>"; };
+		798B3B441D0C74A5008AAF9D /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title@2x.png"; sourceTree = "<group>"; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
-		BF6155AA1D0C0A68000F307C /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDBF6F21D0BEB09003AC38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDBF6F41D0BEB09003AC38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDBF6FF1D0BEC0F003AC38B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
-		BFDBF7031D0BED13003AC38B /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BFDBF7071D0BFEBC003AC38B /* CatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
 		E3FEA6D32C73F611B2FD304A /* Pods-Airneko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +72,97 @@
 				65906EB1010B091807BA1707 /* Pods_Airneko.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		798B3B201D0C6E35008AAF9D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B361D0C7183008AAF9D /* ConvenientClasses */,
+				798B3B241D0C6E35008AAF9D /* Models */,
+				798B3B211D0C6E35008AAF9D /* Controllers */,
+				798B3B261D0C6E35008AAF9D /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		798B3B211D0C6E35008AAF9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B391D0C72BA008AAF9D /* EntranceControllers */,
+				798B3B221D0C6E35008AAF9D /* CatViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		798B3B221D0C6E35008AAF9D /* CatViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B231D0C6E35008AAF9D /* CatViewController.swift */,
+			);
+			path = CatViewControllers;
+			sourceTree = "<group>";
+		};
+		798B3B241D0C6E35008AAF9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B301D0C6F69008AAF9D /* Cat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		798B3B261D0C6E35008AAF9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B3A1D0C72C1008AAF9D /* EntranceViews */,
+				798B3B291D0C6E35008AAF9D /* CatViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		798B3B291D0C6E35008AAF9D /* CatViews */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B321D0C6F78008AAF9D /* CatView.swift */,
+				798B3B331D0C6F78008AAF9D /* CatViewAnimation.swift */,
+			);
+			path = CatViews;
+			sourceTree = "<group>";
+		};
+		798B3B361D0C7183008AAF9D /* ConvenientClasses */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B371D0C718E008AAF9D /* Extensions.swift */,
+			);
+			path = ConvenientClasses;
+			sourceTree = "<group>";
+		};
+		798B3B391D0C72BA008AAF9D /* EntranceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B3B1D0C72D9008AAF9D /* EntranceController.swift */,
+			);
+			path = EntranceControllers;
+			sourceTree = "<group>";
+		};
+		798B3B3A1D0C72C1008AAF9D /* EntranceViews */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B3D1D0C7305008AAF9D /* EntranceView.swift */,
+			);
+			path = EntranceViews;
+			sourceTree = "<group>";
+		};
+		798B3B3F1D0C74A5008AAF9D /* EntranceView */ = {
+			isa = PBXGroup;
+			children = (
+				798B3B401D0C74A5008AAF9D /* CreateFamilyButton@2x.png */,
+				798B3B411D0C74A5008AAF9D /* ExistingFamilyButton@2x.png */,
+				798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */,
+				798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */,
+				798B3B441D0C74A5008AAF9D /* Title@2x.png */,
+			);
+			name = EntranceView;
+			path = Resource/EntranceView;
 			sourceTree = "<group>";
 		};
 		9F9A0E3C7F1D1AB9E98405F9 /* Pods */ = {
@@ -86,9 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */,
-				BFDBF7031D0BED13003AC38B /* Cat.swift */,
-				BFDBF7071D0BFEBC003AC38B /* CatView.swift */,
-				BF6155AA1D0C0A68000F307C /* CatViewController.swift */,
+				798B3B2E1D0C6E5B008AAF9D /* ViewController.swift */,
+				798B3B201D0C6E35008AAF9D /* Source */,
 				BFDBF6FA1D0BEB3E003AC38B /* Resources */,
 			);
 			path = Airneko;
@@ -97,6 +207,7 @@
 		BFDBF6FA1D0BEB3E003AC38B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				798B3B3F1D0C74A5008AAF9D /* EntranceView */,
 				BFDBF7051D0BEF59003AC38B /* GoogleService-Info.plist */,
 				BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */,
 				BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */,
@@ -166,10 +277,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */,
 				BFDBF7001D0BEC0F003AC38B /* .gitignore in Resources */,
+				798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */,
+				798B3B451D0C74A5008AAF9D /* CreateFamilyButton@2x.png in Resources */,
 				BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */,
 				BFDBF7061D0BEF59003AC38B /* GoogleService-Info.plist in Resources */,
+				798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */,
 				BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */,
+				798B3B461D0C74A5008AAF9D /* ExistingFamilyButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798B3B3E1D0C7305008AAF9D /* EntranceView.swift in Sources */,
+				798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */,
+				798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
-				BFDBF7041D0BED13003AC38B /* Cat.swift in Sources */,
-				BF6155AB1D0C0A68000F307C /* CatViewController.swift in Sources */,
-				BFDBF7081D0BFEBC003AC38B /* CatView.swift in Sources */,
+				798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */,
+				798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */,
+				798B3B341D0C6F78008AAF9D /* CatView.swift in Sources */,
+				798B3B381D0C718E008AAF9D /* Extensions.swift in Sources */,
+				798B3B3C1D0C72D9008AAF9D /* EntranceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
