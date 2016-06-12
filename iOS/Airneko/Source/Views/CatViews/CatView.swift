@@ -46,11 +46,17 @@ final class CatView: UIView {
 		return images
 	}()
 	
-	private let esaImage = UIImage(named: "Item_Esa") ?? UIImage()
+	private let esaImage = UIImage(named: "Item_Esa")
+	private let unkoImage = UIImage(named: "Item_Kuso")
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		background.image = UIImage(named: "Background")		
+		
+		do {
+			let view = background
+			view.image = UIImage(named: "Background")
+		}
+		
 		addSubview(background)
 		addSubview(catView)
 		addSubview(itemView)
@@ -137,7 +143,50 @@ extension CatView {
 extension CatView {
 	
 	func addEsa() {
+		
+		let targetSize = itemView.frame.size
+		let targetPosition = itemView.center
+		
+		let dummyView = UIImageView(image: itemView.image)
+		dummyView.center = targetPosition
+		addSubview(dummyView)
+		itemView.frame.origin.y = -itemView.frame.height
 		itemView.image = esaImage
+		
+		UIView.animateKeyframesWithDuration(0.4, delay: 0, options: .CalculationModeCubic, animations: {
+			
+			let length = self.itemView.frame.width
+			
+			UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.6, animations: {
+				self.itemView.center = targetPosition
+			})
+			
+			UIView.addKeyframeWithRelativeStartTime(0.4, relativeDuration: 0.4, animations: {
+				let transform = CGAffineTransform(a: 3, b: 0, c: 0, d: 3, tx: 0, ty: 0)
+				dummyView.transform = transform
+				dummyView.alpha = 0
+			})
+			
+			UIView.addKeyframeWithRelativeStartTime(0.6, relativeDuration: 0.2, animations: {
+				self.itemView.frame.origin.x -= length * 0.1
+				self.itemView.frame.size.width += length * 0.2
+				self.itemView.frame.origin.y += length * 0.3
+				self.itemView.frame.size.height -= length * 0.3
+			})
+			
+			UIView.addKeyframeWithRelativeStartTime(0.8, relativeDuration: 0.2, animations: { 
+				self.itemView.frame.size = targetSize
+				self.itemView.center = targetPosition
+			})
+			
+		}) { (_) in
+			dummyView.removeFromSuperview()
+		}
+		
+	}
+	
+	func receiveUnko() {
+		itemView.image = unkoImage
 	}
 	
 }
