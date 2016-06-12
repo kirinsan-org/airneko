@@ -20,6 +20,7 @@
 		798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */; };
 		798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */; };
 		798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B441D0C74A5008AAF9D /* Title@2x.png */; };
+		BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */; };
 		BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */; };
 		BFDBF6F01D0BEB09003AC38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */; };
 		BFDBF6F31D0BEB09003AC38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBF6F11D0BEB09003AC38B /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashClouds@2x.png"; sourceTree = "<group>"; };
 		798B3B441D0C74A5008AAF9D /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title@2x.png"; sourceTree = "<group>"; };
 		8E8E12FD197A2E8AD4508441 /* Pods-Airneko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airneko.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airneko/Pods-Airneko.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		BFDBF6E51D0BEB09003AC38B /* Airneko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airneko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDBF6E81D0BEB09003AC38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDBF6EF1D0BEB09003AC38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				798B3B301D0C6F69008AAF9D /* Cat.swift */,
+				BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				798B3B351D0C6F78008AAF9D /* CatViewAnimation.swift in Sources */,
 				798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */,
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
+				BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */,
 				798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */,
 				798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */,
 				798B3B341D0C6F78008AAF9D /* CatView.swift in Sources */,
