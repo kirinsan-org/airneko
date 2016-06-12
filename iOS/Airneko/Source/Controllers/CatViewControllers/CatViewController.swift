@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveCocoa
 import CoreMotion
+import FirebaseDatabase
 
 final class CatViewController: UIViewController {
 	
@@ -69,10 +70,20 @@ extension CatViewController: ShakeManagerDelegate {
 	
 	func didStartShake() {
 		print("started")
+		guard let member = MemberID.currentID else {
+			return
+		}
+		let ref = FIRDatabase.database().referenceWithPath("family/sample/member/\(member)/item")
+		ref.setValue("jarashi")
 	}
 	
 	func didFinishShake() {
 		print("finished")
+		guard let member = MemberID.currentID else {
+			return
+		}
+		let ref = FIRDatabase.database().referenceWithPath("family/sample/member/\(member)/item")
+		ref.setValue("none")
 	}
 	
 }
