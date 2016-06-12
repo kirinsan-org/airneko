@@ -1,8 +1,10 @@
 /**
  * 仮想ネコ
  */
+const request = require('request');
 const db = require('./lib/db.js');
 const Neko = require('./Neko.js');
+const NotificationSender = require('./lib/push.js');
 
 let familyRef = db.ref('family/sample');
 let nekoRef = familyRef.child('neko/sampleneko');
@@ -52,6 +54,27 @@ function bomb(memberId) {
   memberRef.child(memberId).child('item').set('unko');
 }
 
+function itazura() {
+  // 誰かのところにGを置く
+  if (rnd(0.5)) {
+    let memberId = randomChoose(Object.keys(members));
+    if (memberId) {
+      memberRef.child(memberId).child('item').set('g');
+    }
+  } else {
+    // ツイートする
+    familyRef.child('ifttt/test').once('value')
+      .then(snapshot => {
+        let requestParams = snapshot.val();
+        if (requestParams) {
+          request(requestParams, (err, res) => {
+            console.log(err, res && res.toJSON && res.toJSON());
+          });
+        }
+      });
+  }
+}
+
 let neko = new Neko(nekoRef);
 
 /**
@@ -72,15 +95,13 @@ function loop() {
     let isEscapade = rnd(neko.getHungry()); // 空腹度が高いほどいたずらになりやすい
     if (isEscapade) {
 
-      // TODO いたずらを実行する。
+      // いたずらを実行する。
       neko.setPlace('other'); // いたずらを実行する時は誰の場所にも現れない。
       neko.setState('escapade');
+      NotificationSender.sendNotification(); // いたずらしていることを通知する
 
       // 誰かのところにGを置く
-      let memberId = randomChoose(Object.keys(members));
-      if (memberId) {
-        memberRef.child(memberId).child('item').set('g');
-      }
+      itazura();
 
     } else {
 
@@ -110,7 +131,7 @@ function loop() {
       let member = members[memberId];
 
       // ねこじゃらしを表示しているかどうか
-      if (member.item === 'setaria') {
+      if (member.item === 'jarashi') {
         if (rnd(0.5)) {
           neko.setPlace(memberId);
           neko.setState('playful');
