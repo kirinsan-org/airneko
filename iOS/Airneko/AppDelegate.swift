@@ -24,12 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window?.rootViewController = ViewController(nibName: nil, bundle: nil)
 		window?.makeKeyAndVisible()
 
-		let delay = 3.0 * Double(NSEC_PER_SEC)
-		let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-		dispatch_after(time, dispatch_get_main_queue(), {
-			NyaaPlayer.sharedInstance.play("nyaa1.wav")
-		})
-
 		return true
 	}
 	
