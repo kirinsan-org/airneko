@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CaaS Monitor</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="Main">
+  <div class="container">
+
+    <h2>ねこ情報</h2>
+
+    <dl class="dl-horizontal" ng-if="neko">
+      <dt>名前</dt>
+      <dd>{{neko.name}}</dd>
+      <dt>居場所</dt>
+      <dd>{{neko.place}}: {{members[neko.place].name}}</dd>
+      <dt>状態</dt>
+      <dd>{{neko.state}}: {{status[neko.state]}}</dd>
+      <dt>空腹度</dt>
+      <dd>{{neko.hungry}}</dd>
+      <dt>うんこ度</dt>
+      <dd>{{neko.unko}}</dd>
+    </dl>
+
+    <h3>なつき度</h3>
+
+    <dl class="dl-horizontal" ng-if="neko">
+      <div ng-repeat="(key, value) in members">
+        <dt>{{value.name}}</dt>
+        <dd>{{neko.natsuki[key]}}</dd>
+      </div>
+    </dl>
+
+    <h3>移動</h3>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default" ng-repeat="(key, value) in members" ng-click="setPlace(key)">{{value.name}}</button>
+      <button type="button" class="btn btn-default" ng-click="setPlace('none')">いない</button>
+    </div>
+
+    <h3>状態</h3>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default" ng-click="setState('sleeping')">寝ている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('angry')">怒っている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('playful')">じゃれている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('yawn')">あくびしている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('delightful')">よろこんでいる</button>
+      <button type="button" class="btn btn-default" ng-click="setState('eating')">餌を食べている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('unko')">クソしている</button>
+      <button type="button" class="btn btn-default" ng-click="setState('escapade')">いたずら実行中</button>
+    </div>
+
+    <h3>空腹度</h3>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default" ng-click="addHungry(0.1)">+10%</button>
+      <button type="button" class="btn btn-default" ng-click="addHungry(-0.1)">-10%</button>
+    </div>
+
+    <h3>うんこ度</h3>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default" ng-click="addUnko(0.1)">+10%</button>
+      <button type="button" class="btn btn-default" ng-click="addUnko(-0.1)">-10%</button>
+    </div>
+
+    <h2>いたずら</h2>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default">いたずら1</button>
+      <button type="button" class="btn btn-default">いたずら2</button>
+      <button type="button" class="btn btn-default">いたずら3</button>
+    </div>
+
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
