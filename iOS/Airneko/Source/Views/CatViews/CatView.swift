@@ -16,11 +16,12 @@ final class CatView: UIView {
 	
 	weak var delegate: CatViewDelegate?
 	
-	let imageView = UIImageView()
+	private let background = UIImageView()
+	let catView = UIImageView()
 	
 	var isInAnimation = false
 	
-	private lazy var animationImages: [String: [UIImage]] = {
+	private let animationImages: [String: [UIImage]] = {
 		let images = Cat.State.allStates.reduce([:]) { (images, nextState) -> [String: [UIImage]] in
 			var images = images
 			let nextStateImages = nextState.animationImageNames.map({ (name) -> UIImage in
@@ -31,11 +32,12 @@ final class CatView: UIView {
 		}
 		return images
 	}()
-
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		backgroundColor = .whiteColor()
-		addSubview(imageView)
+		background.image = UIImage(named: "Background")
+		addSubview(background)
+		addSubview(catView)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -45,8 +47,11 @@ final class CatView: UIView {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		imageView.frame.size = CGSize(width: 256, height: 256)
-		imageView.center = self.center
+		background.frame = self.bounds
+		background.contentMode = .ScaleAspectFill
+		background.center = self.center
+		catView.frame.size = CGSize(width: frame.width * 0.8, height: frame.width * 0.8)
+		catView.center = self.center
 		
 	}
 
@@ -82,7 +87,7 @@ extension CatView {
 		}
 		
 		GCD.runAsynchronizedQueue(at: .Main) {
-			self.imageView.image = images[frame]
+			self.catView.image = images[frame]
 		}
 		
 		GCD.runAsynchronizedQueue(at: .Global(priority: .Default), delay: 0.1 - currentTime.timeIntervalSinceNow) {
@@ -99,15 +104,6 @@ private extension Cat.State {
 	}
 	var animationImageNamePrefix: String {
 		
-		let samplePrefix: String
-		switch self {
-		case .Delightful, .Sleeping:
-			samplePrefix = ""
-			
-		default:
-			samplePrefix = "_sample_"
-		}
-		
 		let prefix: String
 		switch self {
 		case .Sleeping:
@@ -116,7 +112,7 @@ private extension Cat.State {
 			prefix = rawValue
 		}
 		
-		return "\(samplePrefix)\(prefix)"
+		return prefix
 		
 	}
 	var animationImageNames: [String] {
