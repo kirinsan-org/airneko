@@ -35,7 +35,7 @@ final class CatViewController: UIViewController {
 	}
 	
 	deinit {
-		shakeManager.endObservingShakeMotion()
+		shakeManager.stopObserveShakeMotion()
 	}
 	
 	override func loadView() {
@@ -53,7 +53,7 @@ final class CatViewController: UIViewController {
 		button.addTarget(self, action: #selector(CatViewController.addEsa), forControlEvents: .TouchUpInside)
 		catView.itemButton = button
 		
-		shakeManager.startObservingShakeMotion()
+		shakeManager.startObserveShakeMotion()
 	}
 
 	override func preferredStatusBarStyle() -> UIStatusBarStyle {

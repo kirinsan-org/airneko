@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793329331D0D1AA200AEBFBB /* ShakeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793329321D0D1AA200AEBFBB /* ShakeManager.swift */; };
 		798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B231D0C6E35008AAF9D /* CatViewController.swift */; };
 		798B3B2F1D0C6E5B008AAF9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B2E1D0C6E5B008AAF9D /* ViewController.swift */; };
 		798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B3B301D0C6F69008AAF9D /* Cat.swift */; };
@@ -20,17 +21,6 @@
 		798B3B471D0C74A5008AAF9D /* SplashBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */; };
 		798B3B481D0C74A5008AAF9D /* SplashClouds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */; };
 		798B3B491D0C74A5008AAF9D /* Title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798B3B441D0C74A5008AAF9D /* Title@2x.png */; };
-		BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */; };
-		BF6155DD1D0CEFCC000F307C /* nyaa1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D51D0CEFCC000F307C /* nyaa1.wav */; };
-		BF6155DE1D0CEFCC000F307C /* nyaa2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D61D0CEFCC000F307C /* nyaa2.wav */; };
-		BF6155DF1D0CEFCC000F307C /* nyaa3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D71D0CEFCC000F307C /* nyaa3.wav */; };
-		BF6155E01D0CEFCC000F307C /* nyaa4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D81D0CEFCC000F307C /* nyaa4.wav */; };
-		BF6155E11D0CEFCC000F307C /* nyaa5.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155D91D0CEFCC000F307C /* nyaa5.wav */; };
-		BF6155E21D0CEFCC000F307C /* nyaa6.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DA1D0CEFCC000F307C /* nyaa6.wav */; };
-		BF6155E31D0CEFCC000F307C /* nyaa7.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DB1D0CEFCC000F307C /* nyaa7.wav */; };
-		BF6155E41D0CEFCC000F307C /* nyaa8.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6155DC1D0CEFCC000F307C /* nyaa8.wav */; };
-		BF6155E61D0CF65D000F307C /* NyaaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */; };
-		799706031D0D0EAE00184BE2 /* ShakeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799706021D0D0EAE00184BE2 /* ShakeManager.swift */; };
 		799A08421D0CB2DD00C0B4ED /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A08411D0CB2DD00C0B4ED /* GCD.swift */; };
 		799A08451D0CE30600C0B4ED /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08441D0CE30600C0B4ED /* Background@2x.png */; };
 		799A084C1D0CEE6600C0B4ED /* Feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799A08461D0CEE6600C0B4ED /* Feed@2x.png */; };
@@ -60,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		65906EB1010B091807BA1707 /* Pods_Airneko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airneko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		793329321D0D1AA200AEBFBB /* ShakeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeManager.swift; sourceTree = "<group>"; };
 		798B3B231D0C6E35008AAF9D /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		798B3B2E1D0C6E5B008AAF9D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		798B3B301D0C6F69008AAF9D /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cat.swift; path = CatModels/Cat.swift; sourceTree = "<group>"; };
@@ -73,7 +64,6 @@
 		798B3B421D0C74A5008AAF9D /* SplashBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashBottom@2x.png"; sourceTree = "<group>"; };
 		798B3B431D0C74A5008AAF9D /* SplashClouds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashClouds@2x.png"; sourceTree = "<group>"; };
 		798B3B441D0C74A5008AAF9D /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title@2x.png"; sourceTree = "<group>"; };
-		799706021D0D0EAE00184BE2 /* ShakeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeManager.swift; sourceTree = "<group>"; };
 		799A08411D0CB2DD00C0B4ED /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		799A08441D0CE30600C0B4ED /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		799A08461D0CEE6600C0B4ED /* Feed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed@2x.png"; sourceTree = "<group>"; };
@@ -159,7 +149,7 @@
 				BF6155EF1D0D1028000F307C /* MemberID.swift */,
 				BF6155E51D0CF65D000F307C /* NyaaPlayer.swift */,
 				BF6155D21D0CE4B8000F307C /* BluetoothManager.swift */,
-				799706021D0D0EAE00184BE2 /* ShakeManager.swift */,
+				793329321D0D1AA200AEBFBB /* ShakeManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -454,8 +444,8 @@
 				BFDBF6E91D0BEB09003AC38B /* AppDelegate.swift in Sources */,
 				BF6155F01D0D1028000F307C /* MemberID.swift in Sources */,
 				BF6155D31D0CE4B8000F307C /* BluetoothManager.swift in Sources */,
+				793329331D0D1AA200AEBFBB /* ShakeManager.swift in Sources */,
 				798B3B311D0C6F69008AAF9D /* Cat.swift in Sources */,
-				799706031D0D0EAE00184BE2 /* ShakeManager.swift in Sources */,
 				798B3B2A1D0C6E35008AAF9D /* CatViewController.swift in Sources */,
 				798B3B341D0C6F78008AAF9D /* CatView.swift in Sources */,
 				798B3B381D0C718E008AAF9D /* Extensions.swift in Sources */,
