@@ -1,6 +1,7 @@
 /**
  * 仮想ネコ
  */
+const request = require('request');
 const db = require('./lib/db.js');
 const Neko = require('./Neko.js');
 const NotificationSender = require('./lib/push.js');
