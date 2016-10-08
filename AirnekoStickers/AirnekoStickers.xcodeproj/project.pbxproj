@@ -13,6 +13,7 @@
 		791D493B1DA9124F00BFE341 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D493A1DA9124F00BFE341 /* MessagesViewController.swift */; };
 		791D493E1DA9124F00BFE341 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791D493C1DA9124F00BFE341 /* MainInterface.storyboard */; };
 		791D49401DA9124F00BFE341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791D493F1DA9124F00BFE341 /* Assets.xcassets */; };
+		79E34CF51DA914F000C0535B /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E34CF41DA914F000C0535B /* Stickers.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		791D493D1DA9124F00BFE341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		791D493F1DA9124F00BFE341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		791D49411DA9124F00BFE341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E34CF41DA914F000C0535B /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				791D493A1DA9124F00BFE341 /* MessagesViewController.swift */,
 				791D493C1DA9124F00BFE341 /* MainInterface.storyboard */,
 				791D493F1DA9124F00BFE341 /* Assets.xcassets */,
+				79E34CF41DA914F000C0535B /* Stickers.xcassets */,
 				791D49411DA9124F00BFE341 /* Info.plist */,
 			);
 			path = MessagesExtension;
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791D49401DA9124F00BFE341 /* Assets.xcassets in Resources */,
+				79E34CF51DA914F000C0535B /* Stickers.xcassets in Resources */,
 				791D493E1DA9124F00BFE341 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

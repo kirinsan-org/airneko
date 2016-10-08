@@ -1,0 +1,25 @@
+{
+  "properties" : {
+    "duration" : 10,
+    "duration-type" : "fps",
+    "repetitions" : 0
+  },
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "frames" : [
+    {
+      "filename" : "nekojarashi00.png"
+    },
+    {
+      "filename" : "nekojarashi01.png"
+    },
+    {
+      "filename" : "nekojarashi02.png"
+    },
+    {
+      "filename" : "nekojarashi03.png"
+    }
+  ]
+}
